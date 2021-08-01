@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Change Default Pi Username - Clark Weckmann</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="/assets/styles/main.css?v=9c24d44">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <meta name="keywords"
+  content="Raspberry Pi, RPI, Root, Username, Default Username">
+<meta name="description" content="How to change the default username from pi to something more tasteful using the cli.">
+<meta name="author" content="Clark Weckmann">
+<link rel="canonical" href="http://localhost:4000/f/atom.xml">
+<meta content="Weckmann" property="og:site_name">
+<meta content="Change Default Pi Username" property="og:title">
+<meta content="article" property="og:type">
+<meta content="How to change the default username from pi to something more tasteful using the cli." property="og:description">
+<meta content="http://localhost:4000/change-pi-username:200426" property="og:url">
+<meta content="2020-04-26T00:00:00-05:00" property="article:published_time">
+<meta content="http://localhost:4000/about" property="article:author">
+<meta content="http://localhost:4000/assets/images/cover.jpg" property="og:image">
+<meta content="Raspberry Pi, RPI, Root, Username, Default Username" property="article:tag">
+<meta name="twitter:title" content="Change Default Pi Username">
+<meta name="twitter:url" content="http://localhost:4000/change-pi-username:200426">
+<meta name="twitter:description" content="How to change the default username from pi to something more tasteful using the cli.">
+    <meta name="robots" content="index, follow">
+</head>
+
+<body>
+    <header>
+    <nav class="navbar">
+        <div class="nav">
+            <a href="/" class="nav-logo">
+                <img src="/assets/images/weckmann.png" width="70" height="70" alt="Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="/" name="Home"><i class="fas fa-home fa-lg"></i></a></li>
+                <li><a href="/about" name="About"><i class="fas fa-user fa-lg"></i></a></li>
+                <li><a href="https://codepen.io/clarkhacks" target="_blank" name="Codepen"><i class="fab fa-codepen fa-lg"></i></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="intro-header">
+        <div class="container">
+            <div class="page-heading">
+                <h1>Change Default Pi Username</h1>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+<div class="container" role="main">
+    <article class="article">
+        <p>If you’re using Raspbian your default username is <code class="highlighter-rouge">pi</code>. In this article, I will teach you how to change this username, the password, and remap the home directory.
+<!-- more -->
+To do this you must first log in as the <code class="highlighter-rouge">root</code> user. By default, the <code class="highlighter-rouge">root</code> user has no password enabled. Log in as the <code class="highlighter-rouge">pi</code> user and enter this command.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>passwd root
+</code></pre></div></div>
+<p>You should choose a safe and secure password for this user. After you change the <code class="highlighter-rouge">pi</code> username to your desired username I recommend disabling the root password. Make sure password login for root is enabled by editing the <code class="highlighter-rouge">sshd_config</code> file.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>nano /etc/ssh/sshd_config
+</code></pre></div></div>
+
+<p>Find <code class="highlighter-rouge">PermitRootLogin without-password</code> it could say something similar. Change this value to <code class="highlighter-rouge">PermitRootLogin yes</code>.</p>
+
+<p>You can now logout of the <code class="highlighter-rouge">pi</code> user by entering this command.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">logout</span>
+</code></pre></div></div>
+
+<p>If this command fails to work use the <code class="highlighter-rouge">exit</code> command.</p>
+
+<p>Login as the <code class="highlighter-rouge">root</code> user now with the password you created.</p>
+
+<p>We need to modify the name of the <code class="highlighter-rouge">pi</code> user now. Run this command. Replace <code class="highlighter-rouge">newuser</code> with your desired username.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>usermod <span class="nt">-l</span> newuser pi
+</code></pre></div></div>
+
+<p>We need to modify the home directory now to match the new username. Again replace <code class="highlighter-rouge">newuser</code> with your desired username.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>usermod <span class="nt">-m</span> <span class="nt">-d</span> /home/newuser newuser
+</code></pre></div></div>
+
+<p>You can now logout of the <code class="highlighter-rouge">root</code> user and log back in as the username you just created. The password for your username is still the default username for <code class="highlighter-rouge">pi</code>, “raspberry”. If you wish to change this enter this command.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>passwd
+</code></pre></div></div>
+
+<p>Now enter “raspberry” as the <code class="highlighter-rouge">Current Password</code> and then your desired password for <code class="highlighter-rouge">New Password</code> and confirm.</p>
+
+<p>If you wish to lock the <code class="highlighter-rouge">root</code> user password for security reasons you can enter the following.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>passwd <span class="nt">-l</span> root 
+</code></pre></div></div>
+
+<p>You’re all set! Enjoy your new username.</p>
+
+<p>Get your Raspberry Pi today over on Amazon!</p>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&amp;OneJS=1&amp;Operation=GetAdHtml&amp;MarketPlace=US&amp;source=ac&amp;ref=tf_til&amp;ad_type=product_link&amp;tracking_id=weckmann-20&amp;marketplace=amazon&amp;region=US&amp;placement=B08R87H4RR&amp;asins=B08R87H4RR&amp;linkId=b817bda5e52a60ee41533adfdd379bee&amp;show_border=false&amp;link_opens_in_new_window=false&amp;price_color=333333&amp;title_color=0066c0&amp;bg_color=ffffff">
+    </iframe>
+
+    </article>
+
+</div>
+
+<footer>
+    <div class="container">
+        <p class="credits copyright">
+            <p class="credits theme-by">
+                Made With &lt;3 By Clark Weckmann, &copy; 2020
+            </p>
+        </p>
+    </div>
+</footer>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-164935052-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-164935052-1');
+</script>
+<script data-ad-client="ca-pub-8747222803173946" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</body>
+
+</html>

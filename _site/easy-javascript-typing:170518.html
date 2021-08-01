@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Easy Javascript Typing! - Clark Weckmann</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="/assets/styles/main.css?v=9c24d44">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <meta name="keywords"
+  content="javascript, typing effect, typing, easytypingjs">
+<meta name="description" content="Using EasyType.Js to create a super simple typing effect with just 4 steps.">
+<meta name="author" content="Clark Weckmann">
+<link rel="canonical" href="http://localhost:4000/f/atom.xml">
+<meta content="Weckmann" property="og:site_name">
+<meta content="Easy Javascript Typing!" property="og:title">
+<meta content="article" property="og:type">
+<meta content="Using EasyType.Js to create a super simple typing effect with just 4 steps." property="og:description">
+<meta content="http://localhost:4000/easy-javascript-typing:170518" property="og:url">
+<meta content="2017-05-18T00:00:00-05:00" property="article:published_time">
+<meta content="http://localhost:4000/about" property="article:author">
+<meta content="http://localhost:4000/assets/images/cover.jpg" property="og:image">
+<meta content="javascript, typing effect, typing, easytypingjs" property="article:tag">
+<meta name="twitter:title" content="Easy Javascript Typing!">
+<meta name="twitter:url" content="http://localhost:4000/easy-javascript-typing:170518">
+<meta name="twitter:description" content="Using EasyType.Js to create a super simple typing effect with just 4 steps.">
+    <meta name="robots" content="index, follow">
+</head>
+
+<body>
+    <header>
+    <nav class="navbar">
+        <div class="nav">
+            <a href="/" class="nav-logo">
+                <img src="/assets/images/weckmann.png" width="70" height="70" alt="Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="/" name="Home"><i class="fas fa-home fa-lg"></i></a></li>
+                <li><a href="/about" name="About"><i class="fas fa-user fa-lg"></i></a></li>
+                <li><a href="https://codepen.io/clarkhacks" target="_blank" name="Codepen"><i class="fab fa-codepen fa-lg"></i></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="intro-header">
+        <div class="container">
+            <div class="page-heading">
+                <h1>Easy Javascript Typing!</h1>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+<div class="container" role="main">
+    <article class="article">
+        <h1 id="easytypejs">EasyType.js</h1>
+
+<p>What is EasyType.Js??? Well it is a super simple way to create a typing effect! EasyType.js (minified) is only <strong>0.293kB</strong>.</p>
+
+<!-- more -->
+
+<h2 id="how-to">How To</h2>
+
+<p><strong>Step 1</strong></p>
+
+<p>Add The CDN or <a href="https://cdn.clarkhacks.com/easytype.min.js">download</a> EasyType.js</p>
+
+<pre><code class="language-mark-up">&lt;script src="https://cdn.clarkhacks.com/easytype.min.js"&gt;&lt;/script&gt;
+</code></pre>
+
+<p><strong>Step 2</strong></p>
+
+<p>Define what will be typed.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">easyText</span> <span class="o">=</span> <span class="p">[</span><span class="dl">'</span><span class="s1">Apples</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">Pineapples</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">Peaches</span><span class="dl">'</span><span class="p">];</span>
+</code></pre></div></div>
+
+<p><strong>Step 3</strong></p>
+
+<p>Tell EasyType what element to target.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">easyTarget</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">EasyTypeJs</span><span class="dl">'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p><strong>Step 4</strong></p>
+
+<p>Start EasyType with the easyTyper Function.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">easyTyper</span><span class="p">();</span>
+</code></pre></div></div>
+
+<h2 id="example">Example</h2>
+<p><a id="example"></a></p>
+
+<p>See the Pen <a href="https://codepen.io/clarkhacks/pen/xdaqge/">EasyType.Js</a> by Clark Weckmann (<a href="https://codepen.io/clarkhacks">@clarkhacks</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+
+<script src="https://production-assets.codepen.io/assets/embed/ei.js">
+</script>
+
+
+    </article>
+
+</div>
+
+<footer>
+    <div class="container">
+        <p class="credits copyright">
+            <p class="credits theme-by">
+                Made With &lt;3 By Clark Weckmann, &copy; 2020
+            </p>
+        </p>
+    </div>
+</footer>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-164935052-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-164935052-1');
+</script>
+<script data-ad-client="ca-pub-8747222803173946" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</body>
+
+</html>

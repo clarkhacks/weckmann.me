@@ -32,3 +32,7 @@ To check NPM run this:
 ```bash
 $ npm -v
 ```
+
+Get your Raspberry Pi today over on Amazon!
+
+<a target="_blank"  href="https://www.amazon.com/gp/product/B07TC2BK1X/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B07TC2BK1X&linkCode=as2&tag=weckmann-20&linkId=58a9ccecbd171fa564e28591902ecfe8"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=B07TC2BK1X&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=weckmann-20" ></a>

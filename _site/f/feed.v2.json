@@ -1,0 +1,91 @@
+[
+  
+    {
+      "title"    : "Change Default Pi Username",
+      "lead"     : "How to change the default username from pi to something more tasteful using the cli.",
+      "tags"     : "Raspberry Pi, RPI, Root, Username, Default Username",
+      "url"      : "https://www.weckman.me/change-pi-username:200426",
+      "date"     : "2020-04-26 00:00:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Jekyll Nginx Server",
+      "lead"     : "We're gonna learn how to set up a production environment that mimix the Jekyll development server. This will handle 404 errors, 500 errors, and cache control.",
+      "tags"     : "Nginx, Jekyll, Production Server, Development Server, Server Cache Control",
+      "url"      : "https://www.weckman.me/nginx-any-servername:200317",
+      "date"     : "2020-03-17 00:00:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Install NodeJs on Raspberry Pi",
+      "lead"     : "Let's cover how to install NodeJs on the Raspberry Pi.",
+      "tags"     : "NodeJs, RPI, Raspberry Pi, Install NodeJs",
+      "url"      : "https://www.weckman.me/rpi-nodejs-install:200104",
+      "date"     : "2020-01-04 00:00:00 -0600"
+    } ,
+  
+    {
+      "title"    : "Traveler&#39;s Notebook",
+      "lead"     : "We cover what a Traveler's Notebook is and how I set mine up.",
+      "tags"     : "Notebook, Travelers Notebook, Pocket Notebook, Books, Midori",
+      "url"      : "https://www.weckman.me/travelers-notbook:191231",
+      "date"     : "2019-12-31 00:00:00 -0600"
+    } ,
+  
+    {
+      "title"    : "Glitch Projects",
+      "lead"     : "Glitch is a community and IDE for developers all rolled into one!",
+      "tags"     : "javascript, glitch, nodejs, ide",
+      "url"      : "https://www.weckman.me/glitch:190214",
+      "date"     : "2019-02-14 00:00:00 -0600"
+    } ,
+  
+    {
+      "title"    : "LowDB Blog",
+      "lead"     : "LowDB Blog is a LowDB (ya don't say?) and jQuery powered blog with a full private and public API.",
+      "tags"     : "javascript, lowdb, blog, json, jquery, api",
+      "url"      : "https://www.weckman.me/lowdb-blog:180202",
+      "date"     : "2018-02-02 00:00:00 -0600"
+    } ,
+  
+    {
+      "title"    : "Steal Your Consenting Friend&#39;s Gmail Password",
+      "lead"     : "Here's a complete setup for phishing your consenting friend's password!",
+      "tags"     : "Gmail, Google, Nodejs, Glitch, Phishing",
+      "url"      : "https://www.weckman.me/i-stole-your-password:180108",
+      "date"     : "2018-01-08 00:00:00 -0600"
+    } ,
+  
+    {
+      "title"    : "WebLense",
+      "lead"     : "WebLense takes care of this. WebLense is a self-hosted Url-To-Image API.",
+      "tags"     : "",
+      "url"      : "https://www.weckman.me/weblense:171211",
+      "date"     : "2017-12-11 00:00:00 -0600"
+    } ,
+  
+    {
+      "title"    : "Jekyll Short Url",
+      "lead"     : "Easy to use Short Url Script for Jekyll Blogs!",
+      "tags"     : "javascript, short url, jekyll, google",
+      "url"      : "https://www.weckman.me/jekyll-short-url:171101",
+      "date"     : "2017-11-01 00:00:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Node Gmail API",
+      "lead"     : "Create your own Gmail API with Express and Node.",
+      "tags"     : "javascript, node, gmail, api, express",
+      "url"      : "https://www.weckman.me/node-gmail-api:171010",
+      "date"     : "2017-10-10 00:00:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Easy Javascript Typing!",
+      "lead"     : "Using EasyType.Js to create a super simple typing effect with just 4 steps.",
+      "tags"     : "javascript, typing effect, typing, easytypingjs",
+      "url"      : "https://www.weckman.me/easy-javascript-typing:170518",
+      "date"     : "2017-05-18 00:00:00 -0500"
+    } 
+  
+]

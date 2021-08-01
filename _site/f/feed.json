@@ -1,0 +1,80 @@
+[
+
+    {
+      "title"    : "Change Default Pi Username",
+      "url"      : "https://weckman.me/change-pi-username:200426",
+      "date"     : "April 26, 2020",
+      "content"  : "If you’re using Raspbian your default username is pi. In this article, I will teach you how to change this username, the password, and remap the home directory."
+    } ,
+
+    {
+      "title"    : "Jekyll Nginx Server",
+      "url"      : "https://weckman.me/nginx-any-servername:200317",
+      "date"     : "March 17, 2020",
+      "content"  : "Here’s how to mimic the Jekyll Development Server with Nginx for a production environment."
+    } ,
+
+    {
+      "title"    : "Install NodeJs on Raspberry Pi",
+      "url"      : "https://weckman.me/rpi-nodejs-install:200104",
+      "date"     : "January 04, 2020",
+      "content"  : "Node.js® is a JavaScript runtime built on Chrome’s V8 JavaScript engine. NodeJs is an increasingly popular language for developers across the board. Let’s cover how to install NodeJs on the Raspberry Pi."
+    } ,
+
+    {
+      "title"    : "Traveler's Notebook",
+      "url"      : "https://weckman.me/travelers-notbook:191231",
+      "date"     : "December 31, 2019",
+      "content"  : "The Traveler’s Notebook (TN) is a brilliant design. I’ve been carrying notebooks for a while now and love it. My phone is good for a movie title or song I want to remember, but I just prefer pen and paper for all else."
+    } ,
+
+    {
+      "title"    : "Glitch Projects",
+      "url"      : "https://weckman.me/glitch:190214",
+      "date"     : "February 14, 2019",
+      "content"  : "Let’s talk about Glitch! Glitch is a place to develop your NodeJs projects with community support and abundant inspiration."
+    } ,
+
+    {
+      "title"    : "LowDB Blog",
+      "url"      : "https://weckman.me/lowdb-blog:180202",
+      "date"     : "February 02, 2018",
+      "content"  : "LowDB Blog is a LowDB (ya don’t say?) and jQuery powered blog with a full private and public API. This repository is updated frequently."
+    } ,
+
+    {
+      "title"    : "Steal Your Consenting Friend's Gmail Password",
+      "url"      : "https://weckman.me/i-stole-your-password:180108",
+      "date"     : "January 08, 2018",
+      "content"  : "Do you have a consenting friend who you just happen to need their password? Look no more, here is a complete set up."
+    } ,
+
+    {
+      "title"    : "WebLense",
+      "url"      : "https://weckman.me/weblense:171211",
+      "date"     : "December 11, 2017",
+      "content"  : "There is a cascade of URL-To-Image APIs out there. Most of them are pricey, overly-complicated, non-opensource and you don’t have control of the image files. WebLense takes care of this. WebLense is a self-hosted Url-To-Image API."
+    } ,
+
+    {
+      "title"    : "Jekyll Short Url",
+      "url"      : "https://weckman.me/jekyll-short-url:171101",
+      "date"     : "November 01, 2017",
+      "content"  : "Jekyll Short Url uses Goo.gl as a backend and a small Script on your 404 page."
+    } ,
+
+    {
+      "title"    : "Node Gmail API",
+      "url"      : "https://weckman.me/node-gmail-api:171010",
+      "date"     : "October 10, 2017",
+      "content"  : "We will be building a simple Gmail API for easy notification use. Please note this is not the most secure method."
+    } ,
+
+    {
+      "title"    : "Easy Javascript Typing!",
+      "url"      : "https://weckman.me/easy-javascript-typing:170518",
+      "date"     : "May 18, 2017",
+      "content"  : "EasyType.jsWhat is EasyType.Js??? Well it is a super simple way to create a typing effect! EasyType.js (minified) is only 0.293kB."
+    } 
+
+]

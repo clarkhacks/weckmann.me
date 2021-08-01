@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>WebLense - Clark Weckmann</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="/assets/styles/main.css?v=9c24d44">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <meta name="keywords"
+  content="">
+<meta name="description" content="WebLense takes care of this. WebLense is a self-hosted Url-To-Image API.">
+<meta name="author" content="Clark Weckmann">
+<link rel="canonical" href="http://localhost:4000/f/atom.xml">
+<meta content="Weckmann" property="og:site_name">
+<meta content="WebLense" property="og:title">
+<meta content="article" property="og:type">
+<meta content="WebLense takes care of this. WebLense is a self-hosted Url-To-Image API." property="og:description">
+<meta content="http://localhost:4000/weblense:171211" property="og:url">
+<meta content="2017-12-11T00:00:00-06:00" property="article:published_time">
+<meta content="http://localhost:4000/about" property="article:author">
+<meta content="http://localhost:4000/assets/images/cover.jpg" property="og:image">
+<meta content="" property="article:tag">
+<meta name="twitter:title" content="WebLense">
+<meta name="twitter:url" content="http://localhost:4000/weblense:171211">
+<meta name="twitter:description" content="WebLense takes care of this. WebLense is a self-hosted Url-To-Image API.">
+    <meta name="robots" content="index, follow">
+</head>
+
+<body>
+    <header>
+    <nav class="navbar">
+        <div class="nav">
+            <a href="/" class="nav-logo">
+                <img src="/assets/images/weckmann.png" width="70" height="70" alt="Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="/" name="Home"><i class="fas fa-home fa-lg"></i></a></li>
+                <li><a href="/about" name="About"><i class="fas fa-user fa-lg"></i></a></li>
+                <li><a href="https://codepen.io/clarkhacks" target="_blank" name="Codepen"><i class="fab fa-codepen fa-lg"></i></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="intro-header">
+        <div class="container">
+            <div class="page-heading">
+                <h1>WebLense</h1>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+<div class="container" role="main">
+    <article class="article">
+        <p>There is a cascade of URL-To-Image APIs out there. Most of them are pricey, overly-complicated, non-opensource and you don’t have control of the image files. WebLense takes care of this. WebLense is a self-hosted Url-To-Image API.
+<!-- more --></p>
+<h2 id="how-to-use-weblense">How To Use WebLense</h2>
+<p><em>Updated on January 30th, 2018</em></p>
+
+<p>Using WebLense is incredibly simple.</p>
+
+<p><a href="https://glitch.com/edit/#!/import/github/clarkhacks/WebLense"><img src="https://cdn.glitch.com/2703baf2-b643-4da7-ab91-7ee2a2d00b5b%2Fremix-button.svg" alt="Remix on Glitch" class="image-button" /></a></p>
+
+<p>or</p>
+
+<p><a href="https://heroku.com/deploy?template=https://github.com/clarkhacks/WebLense"><img src="https://www.herokucdn.com/deploy/button.svg" class="image-button" /></a></p>
+
+<p>or</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/clarkhacks/WebLense.git
+<span class="nb">cd </span>WebLense
+npm <span class="nb">install</span> <span class="o">&amp;&amp;</span> npm start
+</code></pre></div></div>
+
+<h2 id="api">API</h2>
+
+<p>Use <code class="highlighter-rouge">Lense</code> endpoint for API calls.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th><code class="highlighter-rouge">GET</code></th>
+      <th>Required</th>
+      <th>Function</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>url</td>
+      <td>Yes</td>
+      <td>URL To Capture</td>
+    </tr>
+    <tr>
+      <td>width</td>
+      <td>No</td>
+      <td>End Width</td>
+    </tr>
+    <tr>
+      <td>height</td>
+      <td>No</td>
+      <td>End Height</td>
+    </tr>
+    <tr>
+      <td>delay</td>
+      <td>No</td>
+      <td>Delay Screenshot</td>
+    </tr>
+    <tr>
+      <td>json</td>
+      <td>No</td>
+      <td>Return Json</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="examples">Examples</h2>
+<p><strong>Web</strong></p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://projectid.herokuapp.com/lense?url=https://clarkhacks.com/blog&amp;width=1920&amp;height=720
+</code></pre></div></div>
+
+<p><strong>jQuery</strong></p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">$</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">https://projectid.glitch.me/lense</span><span class="dl">'</span><span class="p">,</span>
+<span class="p">{</span> <span class="na">url</span><span class="p">:</span> <span class="dl">'</span><span class="s1">https://clarkhacks.com</span><span class="dl">'</span> <span class="p">},</span>
+<span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+    <span class="p">...</span>
+<span class="p">});</span>
+</code></pre></div></div>
+<h2 id="out-of-space">Out Of Space?</h2>
+
+<p>Glitch Projects are allowed 128mb of space. The WebLense app takes up ~40mb with captured images taking up the rest.</p>
+
+<p><strong>Options</strong></p>
+<ul>
+  <li>Clear <code class="highlighter-rouge">sites</code> Folder</li>
+  <li>Host WebLense somewhere else.</li>
+  <li></li>
+</ul>
+
+    </article>
+
+</div>
+
+<footer>
+    <div class="container">
+        <p class="credits copyright">
+            <p class="credits theme-by">
+                Made With &lt;3 By Clark Weckmann, &copy; 2020
+            </p>
+        </p>
+    </div>
+</footer>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-164935052-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-164935052-1');
+</script>
+<script data-ad-client="ca-pub-8747222803173946" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</body>
+
+</html>
