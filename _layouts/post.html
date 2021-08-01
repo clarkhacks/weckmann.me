@@ -1,0 +1,17 @@
+---
+layout: default
+---
+{% include header.html %}
+
+{% if page.depreciated == true %}
+<div class="ribbon">Depreciated</div>
+{% else %}
+{% endif %}
+<div class="container" role="main">
+    <article class="article">
+        {{ content }}
+    </article>
+
+</div>
+
+{% include footer.html %}

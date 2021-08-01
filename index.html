@@ -1,0 +1,48 @@
+---
+title: Home
+layout: default
+---
+
+{% include header.html %}
+<div class="container" role="main">
+    <div class="posts-list">
+        {% for post in paginator.posts %}
+        <article class="post-preview">
+            <a href="{{ post.url }}">
+                <h2 class="post-title">{{ post.title }}</h2>
+            </a>
+            <div class="post-entry">
+                <p>
+                    <p>{{ post.excerpt }}</p>
+                    <a href="{{ post.url }}" class="post-read-more">Read More</a>
+            </div>
+
+            <div class="postmeta">
+                <span class="meta-post">
+                    <i class="fa fa-calendar-alt"></i>
+                    {% include post-date.html %}
+                </span>
+            </div>
+        </article>
+        {% endfor %}
+
+
+    </div>
+
+    <ul class="pager">
+
+        {% if paginator.previous_page %}
+        <li class="previous">
+            <a href="{{paginator.previous_page_path}}">&larr; Newer</a>
+        </li>
+        {% else %} {% endif %}
+        {% if paginator.next_page %}
+        <li class="next">
+            <a href="{{paginator.next_page_path}}">Older &rarr;</a>
+        </li>
+        {% else %} {% endif %}
+
+    </ul>
+
+</div>
+{% include footer.html %}
