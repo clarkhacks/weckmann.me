@@ -1,23 +1,19 @@
 ---
-title: Weckmann
-url: https://clark.weckmann.me
-baseurl: "/"
-email: clark@weckmann.me
-desc: Building, Designing, Developing, and Production of content and services. My name is Clark Weckmann and this is what I do.
+title: Clark Weckmann
+baseurl: ""
+desc: A minimal blog for all of my notes and projects, enjoy.
+about: My name is Clark Weckmann, and I have a problem - self hosting.
+image: https://cdn.weckmann.me/me.jpg
 excerpt_separator: "<!-- more -->"
 markdown: kramdown
-plugins:
+gems:
 - jekyll-paginate
 - jekyll-sitemap
-- jekyll_version_plugin
 exclude:
-  - package.json
-  - TODO.md
-  - node_modules
   - .jekyll-metadata
   - README.md
   - CNAME
 paginate: 5
 paginate_path: "/:num/"
 highlighter: rouge
-permalink: ":slug::short_year:month:day"
+permalink: pretty

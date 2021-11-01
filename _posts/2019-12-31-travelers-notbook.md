@@ -29,8 +29,6 @@ The biggest reason I am a TN user is flexibility. It's a leather folder with som
 
 There are hundreds of tutorials online to set up your TN so I'll skip the general setup and go to how mine is set up.
 
-<a target="_blank"  href="https://www.amazon.com/gp/product/B01BVJES3S/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B01BVJES3S&linkCode=as2&tag=weckmann-20&linkId=ef2fe6bc6e7751cfe9e997e0b487649b"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=B01BVJES3S&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=weckmann-20" ></a>
-
 ### 2 Notebooks
 
 I carry two notebooks within my TN. One is a generalized everyday notebook the other is for transfers and loose-leaf.

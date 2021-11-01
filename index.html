@@ -1,48 +1,25 @@
 ---
-title: Home
 layout: default
 ---
-
-{% include header.html %}
-<div class="container" role="main">
-    <div class="posts-list">
-        {% for post in paginator.posts %}
-        <article class="post-preview">
-            <a href="{{ post.url }}">
-                <h2 class="post-title">{{ post.title }}</h2>
-            </a>
-            <div class="post-entry">
-                <p>
-                    <p>{{ post.excerpt }}</p>
-                    <a href="{{ post.url }}" class="post-read-more">Read More</a>
-            </div>
-
-            <div class="postmeta">
-                <span class="meta-post">
-                    <i class="fa fa-calendar-alt"></i>
-                    {% include post-date.html %}
-                </span>
-            </div>
-        </article>
-        {% endfor %}
-
-
+<main class="container">
+  <div class="row">
+    <div class="col-2">
+      <h1>{{ site.title }}</h1>
+      <p class="lead">
+          <br/>{{ site.desc }}
+      </p>
+      <article>
+        <h1>Posts</h1>
+      </article>
+      {% for post in paginator.posts %}
+      <article>
+        <h1>{{ post.title }}</h1>
+        <p>{{ post.excerpt }}</p>
+        <a href="{{ site.baseurl }}/{{ post.url }}">[ Read ]</a>
+      </article>
+      {% endfor %}
+      {% include buttons.html %}
     </div>
-
-    <ul class="pager">
-
-        {% if paginator.previous_page %}
-        <li class="previous">
-            <a href="{{paginator.previous_page_path}}">&larr; Newer</a>
-        </li>
-        {% else %} {% endif %}
-        {% if paginator.next_page %}
-        <li class="next">
-            <a href="{{paginator.next_page_path}}">Older &rarr;</a>
-        </li>
-        {% else %} {% endif %}
-
-    </ul>
-
-</div>
-{% include footer.html %}
+    {% include sidebar.html %}
+  </div>
+</main>
