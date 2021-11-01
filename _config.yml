@@ -3,7 +3,7 @@ title: Clark Weckmann
 baseurl: ""
 desc: A minimal blog for all of my notes and projects, enjoy.
 about: My name is Clark Weckmann, and I have a problem - self hosting.
-image: https://cdn.weckmann.me/me.jpg
+image: https://cdn.weckmann.me/me.png
 excerpt_separator: "<!-- more -->"
 markdown: kramdown
 gems:
