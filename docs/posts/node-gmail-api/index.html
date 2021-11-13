@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="Description" content="You're reading it!" />
+  <title>Node Gmail API</title>
+  <link rel="shortcut icon" type="image/jpg" href="/favicon.png"/>
+  <link rel="alternate" href="/feed.xml" type="application/atom+xml" title="Clark Weckmann" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="stylesheet" href="/styles/common.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="/script.js" defer></script>
+</head>
+
+<body>
+  <!-- START NAV -->
+    <nav class="navbar">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+          <img src="https://cdn.weckmann.me/wkmn.png" alt="Logo" />
+        </a>
+        <span class="navbar-burger burger" data-target="navbarMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </div>
+      <div id="navbarMenu" class="navbar-menu">
+        <div class="navbar-end">
+          <a href="/" class="navbar-item is-active is-size-5 has-text-weight-semibold">
+            Home
+          </a>
+          <a href="https://buy.stripe.com/bIY4ie5Uq9oegiA8wz" class="navbar-item is-size-5 has-text-weight-semibold">
+            Donate
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- END NAV -->
+
+  <!-- Image -->
+  <section class="hero">
+    <div class="container">
+      <section class="section content">
+        <div class="content is-medium">
+          <h1 class="title">Node Gmail API</h1>
+        </div>
+      </section>
+    </div>
+  </section>
+  <section class="hero columns" style="
+    width: 100%;
+">
+    <div class="hero-body column is-half is-offset-one-quarter">
+      <div class="container content">
+        <section class="section">
+          <p><p>We will be building a simple Gmail API for easy notification use. Please note this is not the most secure method.</p>
+<h3>Requirements</h3>
+<ul>
+<li>Node Js</li>
+<li>Small Linux Server</li>
+<li><em>Throw Away</em> Gmail Account</li>
+</ul>
+<p><em>Check Out My Example</em> <a href="%22https://apis.clarkhacks.com/cgi/gui%22">Node Notify</a></p>
+<h2>Gmail Account</h2>
+<p><strong>DO NOT</strong> Use your daily Gmail Account. Create a <em>Throw Away</em> as we will need to enable <strong>less secure apps</strong>.</p>
+<h4><a href="%22https://accounts.google.com/SignUp%22">Create a New Gmail Account</a>.</h4>
+<p>When creating your account note your password.</p>
+<p>If you will not be responding to inbound emails you can enable a <em>Vacation</em> Response.</p>
+<pre><code>1. In the top right, click Settings.
+2. Scroll down to the &quot;Vacation responder&quot; section.
+3. Select Vacation responder on.
+4. Fill in the date range, subject, and message.
+5. Under your message, check the box if you only want your contacts to see your vacation reply.
+6. At the bottom of the page, click Save Changes.
+
+~ Google Support
+</code></pre>
+<h4>Less Secure Apps</h4>
+<p>Click the link below.</p>
+<p><a href="%22https://www.google.com/settings/security/lesssecureapps%22">Enable Less Secure Apps</a>.</p>
+<h3>Copy The Template</h3>
+<pre><code>&gt;$ git clone https://github.com/clarkhacks/Gmail-API
+&gt;$ cd Gmail-API
+&gt;$ npm install
+</code></pre>
+<p>You now have a blank <code>app.js</code>, completed code (for example/copy-paste), and <code>node_modules</code> installed.</p>
+<h3>The Code</h3>
+<p>Add your details to <code>credentials.json</code>. This file will not be open to the public however, this is why our code is less secure.</p>
+<pre><code>// ./credentials.json
+
+{
+  &quot;user&quot;: &quot;user@gmail.com&quot;, // your email
+  &quot;pass&quot;: &quot;AbCdEf!&quot;			// your password
+}
+</code></pre>
+<p>Include your variables.</p>
+<pre><code>// ./app.js
+
+var
+  express = require('express'),
+  app = express(),
+  credentials = require('./credentials.json' // email &amp; pass
+</code></pre>
+<p>Set up routes.</p>
+<pre><code>// ./app.js
+
+app.get('/send', function(req, res) {
+// ...
+
+</code></pre>
+<p>Send email from <code>localhost/send</code></p>
+<pre><code>// ./app.js &gt; In 'send' route.
+
+var send = require('gmail-send')({
+  user: credentials.user,          // credentials.json - email
+  pass: credentials.pass,          // credentials.json - password
+  to: &quot;name@domain.tld&quot;,           // Send To Email
+  subject: &quot;Hello!&quot;,               // Subject
+  text: &quot;Sent from my Gmail API!&quot;, // Message
+})({});
+
+return res.send(&quot;To: &quot; + sendTo + &quot;&lt;br&gt;&quot; + &quot;Subject: &quot; + subject + &quot;&lt;br&gt;&quot; + sendWhat
+</code></pre>
+<p>Using queries to get email, subject, and message.</p>
+<pre><code>// ./app.js &gt; In 'send' route.
+
+  var sendTo = req.query.sendTo,
+    subject = req.query.subject,
+    sendWhat = req.query.sendWhat
+  if (sendTo &amp;&amp; sendWhat &amp;&amp; sendWhat) {
+  	var send = require('gmail-send')({
+  	  user: credentials.user,
+  	  pass: credentials.pass,
+  	  to: sendTo,
+  	  subject: subject,
+  	  text: sendWhat,
+  	})({});
+
+  	return res.send(&quot;To: &quot; + sendTo + &quot;&lt;br&gt;&quot; + &quot;Subject: &quot; + subject + &quot;&lt;br&gt;&quot; + sendWhat
+  }
+   else {
+    return res.send('No Email Specified.'
+  }
+</code></pre>
+<h3>In Use</h3>
+<p>In your browser visit <code>http://localhost/send?sendTo=user@domain.tld&amp;subject=Hello&amp;sendWhat=Greetings%21</code>.</p>
+<p>You should get a response that looks like this:</p>
+<pre><code>To: user@domain.tld
+Subject: Hello
+Greetings!
+</code></pre>
+<h2>What Can I Do With This?</h2>
+<p>I have a service like this one running (I have secured it with json web tokens) that I use to notify my phone when <code>x</code> happens.</p>
+<p>You could use this on the front-end by sending requests with javascript. I recommend securing the API itself.</p>
+<p>Sending a text message to your phone can be costly (depending how often you do it). One way around this is with email! Send an email to YouNumber@smsgateway.tld and your phone should receive a text message.</p>
+<p>Here are some of the SMS Gateway:</p>
+<pre><code>Verizon		number@vtext.com
+ATT		number@txt.att.net
+Cricket		number@sms.mycricket.
+T-Mobile	number@@tmomail.net
+
+For more just Google :)
+</code></pre>
+</p>
+        </section>
+      </div>
+    </div>
+  </section>
+    <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        <strong>Weckmann.me</strong> by WKMN Development
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Get all "navbar-burger" elements
+      const $navbarBurgers = Array.prototype.slice.call(
+        document.querySelectorAll(".navbar-burger"),
+        0
+      );
+
+      // Check if there are any navbar burgers
+      if ($navbarBurgers.length > 0) {
+        // Add a click event on each of them
+        $navbarBurgers.forEach(el => {
+          el.addEventListener("click", () => {
+            // Get the target from the "data-target" attribute
+            const target = el.dataset.target;
+            const $target = document.getElementById(target);
+
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            el.classList.toggle("is-active");
+            $target.classList.toggle("is-active");
+          });
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>

@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <meta name="Description" content="You're reading it!" />
-  <title>{{ title }}</title>
+  <title>Install NodeJs on Raspberry Pi</title>
   <link rel="shortcut icon" type="image/jpg" href="/favicon.png"/>
-  <link rel="alternate" href="/feed.xml" type="application/atom+xml" title="{{ siteMeta.author.name }}" />
+  <link rel="alternate" href="/feed.xml" type="application/atom+xml" title="Clark Weckmann" />
   <meta name="twitter:card" content="summary" />
   <link rel="stylesheet" href="/styles/common.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
@@ -19,7 +19,30 @@
 
 <body>
   <!-- START NAV -->
-  {% include header.liquid %}
+    <nav class="navbar">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+          <img src="https://cdn.weckmann.me/wkmn.png" alt="Logo" />
+        </a>
+        <span class="navbar-burger burger" data-target="navbarMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </div>
+      <div id="navbarMenu" class="navbar-menu">
+        <div class="navbar-end">
+          <a href="/" class="navbar-item is-active is-size-5 has-text-weight-semibold">
+            Home
+          </a>
+          <a href="https://buy.stripe.com/bIY4ie5Uq9oegiA8wz" class="navbar-item is-size-5 has-text-weight-semibold">
+            Donate
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
 
   <!-- END NAV -->
 
@@ -28,7 +51,7 @@
     <div class="container">
       <section class="section content">
         <div class="content is-medium">
-          <h1 class="title">{{title}}</h1>
+          <h1 class="title">Install NodeJs on Raspberry Pi</h1>
         </div>
       </section>
     </div>
@@ -39,12 +62,31 @@
     <div class="hero-body column is-half is-offset-one-quarter">
       <div class="container content">
         <section class="section">
-          <p>{{content}}</p>
+          <p><p>Node.js® is a JavaScript runtime built on Chrome’s V8 JavaScript engine. NodeJs is an increasingly popular language for developers across the board. Let’s cover how to install NodeJs on the Raspberry Pi.</p>
+<p>To start off we need to add the NodeJs repository to your Pi’s list. Run this command:</p>
+<pre><code>$ curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -
+</code></pre>
+<p>This will enable the repository. Once it’s enabled you can install NodeJs and NPM with this command.</p>
+<pre><code>$ sudo apt install nodejs
+</code></pre>
+<p>This will take awhile to install, once it’s done test it with this command:</p>
+<pre><code>$ node -v
+</code></pre>
+<p>To check NPM run this:</p>
+<pre><code>$ npm -v
+</code></pre>
+</p>
         </section>
       </div>
     </div>
   </section>
-  {% include footer.html %}
+    <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        <strong>Weckmann.me</strong> by WKMN Development
+      </p>
+    </div>
+  </footer>
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {

@@ -1,9 +1,3 @@
----
-pagination:
-  data: collections.posts
-  size: 5
-  reverse: true
----
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,8 +7,8 @@ pagination:
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <meta name="Description" content="Welcome my mess! I'm a dabbler of many things, but self hosting is my addiction." />
   <link rel="shortcut icon" type="image/jpg" href="/favicon.png"/>
-  <title>{{ title }}</title>
-  <link rel="alternate" href="/feed.xml" type="application/atom+xml" title="{{ siteMeta.author.name }}" />
+  <title>Clark Weckmann</title>
+  <link rel="alternate" href="/feed.xml" type="application/atom+xml" title="Clark Weckmann" />
   <meta name="twitter:card" content="summary" />
   <link rel="stylesheet" href="/styles/common.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
@@ -25,7 +19,30 @@ pagination:
 
 <body>
   <!-- START NAV -->
-  {% include header.liquid %}
+    <nav class="navbar">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+          <img src="https://cdn.weckmann.me/wkmn.png" alt="Logo" />
+        </a>
+        <span class="navbar-burger burger" data-target="navbarMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </div>
+      <div id="navbarMenu" class="navbar-menu">
+        <div class="navbar-end">
+          <a href="/" class="navbar-item is-active is-size-5 has-text-weight-semibold">
+            Home
+          </a>
+          <a href="https://buy.stripe.com/bIY4ie5Uq9oegiA8wz" class="navbar-item is-size-5 has-text-weight-semibold">
+            Donate
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
   <!-- END NAV -->
 
   <!-- Image -->
@@ -52,39 +69,52 @@ pagination:
   <section class="hero ">
     <div class="hero-body">
       <div class="container">
-        {% for post in pagination.items %}
+        
         <section class="section">
-          <a href="{{post.url}}" class="content is-medium columns is-mobile">
+          <a href="/posts/node-gmail-api/" class="content is-medium columns is-mobile">
             <span class="column is-four-fifths">
-              <h2 class="subtitle is-5 has-text-grey">{{ post.date | date: '%B %d, %Y' }}</h2>
-              <h1 class=" title has-text-black is-4">{{ post.data.title }}</h1>
+              <h2 class="subtitle is-5 has-text-grey">October 09, 2017</h2>
+              <h1 class=" title has-text-black is-4">Node Gmail API</h1>
             </span>
             <span class="column has-text-right">
               <i class="fas fa-arrow-right"></i>
             </span>
           </a>
         </section>
-        {% endfor %}
-        {% if pagination.pageLinks.length > 1 %}
+        
+        <section class="section">
+          <a href="/posts/easy-javascript-typing/" class="content is-medium columns is-mobile">
+            <span class="column is-four-fifths">
+              <h2 class="subtitle is-5 has-text-grey">May 17, 2017</h2>
+              <h1 class=" title has-text-black is-4">Easy Javascript Typing!</h1>
+            </span>
+            <span class="column has-text-right">
+              <i class="fas fa-arrow-right"></i>
+            </span>
+          </a>
+        </section>
+        
+        
         <nav class="pagination is-rounded" role="navigation" aria-label="pagination">
-          {% if pagination.previousPageLink %}
-          <a class="pagination-previous" href="{{ pagination.previousPageHref | url }}">View Newer</a>
-          {% else %}
-          <a class="pagination-previous" disabled>View Newer</a>
-
-          {% endif %}
-          {% if pagination.nextPageLink %}
-          <a class="pagination-next" href="{{ pagination.nextPageHref | url }}">View Older</a>
-          {% else %}
+          
+          <a class="pagination-previous" href="/1/">View Newer</a>
+          
+          
           <a class="pagination-next" disabled>View Older</a>
 
-          {% endif %}
+          
         </nav>
-        {% endif %}
+        
       </div>
     </div>
   </section>
-  {% include footer.html %}
+    <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        <strong>Weckmann.me</strong> by WKMN Development
+      </p>
+    </div>
+  </footer>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       // Get all "navbar-burger" elements
