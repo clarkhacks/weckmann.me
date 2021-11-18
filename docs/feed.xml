@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Clark Weckmann</title>
+  <subtitle>The blog of a person addicted to self hosting.</subtitle>
+  <link href="https://www.weckmann.me" rel="self"/>
+  <link href="https://www.weckmann.me"/>
+  <updated>2021-11-17T00:00:00Z</updated>
+  <id>https://www.weckmann.me</id>
+  <author>
+    <name>Clark Weckmann</name>
+    <email>contact@wkmn.us</email>
+  </author>
+    
+    <entry>
+      <title>Easy Javascript Typing!</title>
+      <link href="https://www.weckmann.me/posts/easy-javascript-typing/"/>
+      <updated>2017-05-18T00:00:00Z</updated>
+      <id>https://www.weckmann.me/posts/easy-javascript-typing/</id>
+      <content type="html">&lt;h1&gt;EasyType.js&lt;/h1&gt;
+&lt;p&gt;What is EasyType.Js??? Well it is a super simple way to create a typing effect! EasyType.js (minified) is only &lt;strong&gt;0.293kB&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2&gt;How To&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Step 1&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Add The CDN or &lt;a href=&quot;https://www.weckmann.me/posts/easy-javascript-typing/%22https://cdn.clarkhacks.com/easytype.min.js%22&quot;&gt;download&lt;/a&gt; EasyType.js&lt;/p&gt;
+&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;script&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;https://cdn.clarkhacks.com/easytype.min.js&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token script&quot;&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;script&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Step 2&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Define what will be typed.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;var easyText = [&#39;Apples&#39;, &#39;Pineapples&#39;, &#39;Peaches&#39;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Step 3&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Tell EasyType what element to target.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;var easyTarget = document.getElementById(&#39;EasyTypeJs&#39;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Step 4&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Start EasyType with the easyTyper Function.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;easyTyper
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;Example&lt;/h2&gt;
+&lt;p&gt;See the Pen &lt;a href=&quot;https://codepen.io/clarkhacks/pen/xdaqge/&quot;&gt;EasyType.Js&lt;/a&gt; by Clark Weckmann (&lt;a href=&quot;https://codepen.io/clarkhacks&quot;&gt;@clarkhacks&lt;/a&gt;) on &lt;a href=&quot;https://codepen.io/&quot;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
+&lt;script src=&quot;https://production-assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;br /&gt;&lt;/script&gt;
+
+        &lt;hr/&gt; &lt;p&gt;&lt;a href=&#39;mailto:arpitbatra123@gmail.com?subject=Reply: Easy Javascript Typing!&#39;&gt;Reply via email&lt;/a&gt; &lt;/p&gt;
+      </content>
+    </entry>
+    
+    <entry>
+      <title>Node Gmail API</title>
+      <link href="https://www.weckmann.me/posts/node-gmail-api/"/>
+      <updated>2017-10-10T00:00:00Z</updated>
+      <id>https://www.weckmann.me/posts/node-gmail-api/</id>
+      <content type="html">&lt;p&gt;We will be building a simple Gmail API for easy notification use. Please note this is not the most secure method.&lt;/p&gt;
+&lt;h3&gt;Requirements&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Node Js&lt;/li&gt;
+&lt;li&gt;Small Linux Server&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Throw Away&lt;/em&gt; Gmail Account&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Check Out My Example&lt;/em&gt; &lt;a href=&quot;https://www.weckmann.me/posts/node-gmail-api/%22https://apis.clarkhacks.com/cgi/gui%22&quot;&gt;Node Notify&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Gmail Account&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;DO NOT&lt;/strong&gt; Use your daily Gmail Account. Create a &lt;em&gt;Throw Away&lt;/em&gt; as we will need to enable &lt;strong&gt;less secure apps&lt;/strong&gt;.&lt;/p&gt;
+&lt;h4&gt;&lt;a href=&quot;https://www.weckmann.me/posts/node-gmail-api/%22https://accounts.google.com/SignUp%22&quot;&gt;Create a New Gmail Account&lt;/a&gt;.&lt;/h4&gt;
+&lt;p&gt;When creating your account note your password.&lt;/p&gt;
+&lt;p&gt;If you will not be responding to inbound emails you can enable a &lt;em&gt;Vacation&lt;/em&gt; Response.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1. In the top right, click Settings.
+2. Scroll down to the &amp;quot;Vacation responder&amp;quot; section.
+3. Select Vacation responder on.
+4. Fill in the date range, subject, and message.
+5. Under your message, check the box if you only want your contacts to see your vacation reply.
+6. At the bottom of the page, click Save Changes.
+
+~ Google Support
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4&gt;Less Secure Apps&lt;/h4&gt;
+&lt;p&gt;Click the link below.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.weckmann.me/posts/node-gmail-api/%22https://www.google.com/settings/security/lesssecureapps%22&quot;&gt;Enable Less Secure Apps&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;Copy The Template&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt;$ git clone https://github.com/clarkhacks/Gmail-API
+&amp;gt;$ cd Gmail-API
+&amp;gt;$ npm install
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You now have a blank &lt;code&gt;app.js&lt;/code&gt;, completed code (for example/copy-paste), and &lt;code&gt;node_modules&lt;/code&gt; installed.&lt;/p&gt;
+&lt;h3&gt;The Code&lt;/h3&gt;
+&lt;p&gt;Add your details to &lt;code&gt;credentials.json&lt;/code&gt;. This file will not be open to the public however, this is why our code is less secure.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;// ./credentials.json
+
+{
+  &amp;quot;user&amp;quot;: &amp;quot;user@gmail.com&amp;quot;, // your email
+  &amp;quot;pass&amp;quot;: &amp;quot;AbCdEf!&amp;quot;			// your password
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Include your variables.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;// ./app.js
+
+var
+  express = require(&#39;express&#39;),
+  app = express(),
+  credentials = require(&#39;./credentials.json&#39; // email &amp;amp; pass
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Set up routes.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;// ./app.js
+
+app.get(&#39;/send&#39;, function(req, res) {
+// ...
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Send email from &lt;code&gt;localhost/send&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;// ./app.js &amp;gt; In &#39;send&#39; route.
+
+var send = require(&#39;gmail-send&#39;)({
+  user: credentials.user,          // credentials.json - email
+  pass: credentials.pass,          // credentials.json - password
+  to: &amp;quot;name@domain.tld&amp;quot;,           // Send To Email
+  subject: &amp;quot;Hello!&amp;quot;,               // Subject
+  text: &amp;quot;Sent from my Gmail API!&amp;quot;, // Message
+})({});
+
+return res.send(&amp;quot;To: &amp;quot; + sendTo + &amp;quot;&amp;lt;br&amp;gt;&amp;quot; + &amp;quot;Subject: &amp;quot; + subject + &amp;quot;&amp;lt;br&amp;gt;&amp;quot; + sendWhat
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Using queries to get email, subject, and message.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;// ./app.js &amp;gt; In &#39;send&#39; route.
+
+  var sendTo = req.query.sendTo,
+    subject = req.query.subject,
+    sendWhat = req.query.sendWhat
+  if (sendTo &amp;amp;&amp;amp; sendWhat &amp;amp;&amp;amp; sendWhat) {
+  	var send = require(&#39;gmail-send&#39;)({
+  	  user: credentials.user,
+  	  pass: credentials.pass,
+  	  to: sendTo,
+  	  subject: subject,
+  	  text: sendWhat,
+  	})({});
+
+  	return res.send(&amp;quot;To: &amp;quot; + sendTo + &amp;quot;&amp;lt;br&amp;gt;&amp;quot; + &amp;quot;Subject: &amp;quot; + subject + &amp;quot;&amp;lt;br&amp;gt;&amp;quot; + sendWhat
+  }
+   else {
+    return res.send(&#39;No Email Specified.&#39;
+  }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;In Use&lt;/h3&gt;
+&lt;p&gt;In your browser visit &lt;code&gt;http://localhost/send?sendTo=user@domain.tld&amp;amp;subject=Hello&amp;amp;sendWhat=Greetings%21&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;You should get a response that looks like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;To: user@domain.tld
+Subject: Hello
+Greetings!
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;What Can I Do With This?&lt;/h2&gt;
+&lt;p&gt;I have a service like this one running (I have secured it with json web tokens) that I use to notify my phone when &lt;code&gt;x&lt;/code&gt; happens.&lt;/p&gt;
+&lt;p&gt;You could use this on the front-end by sending requests with javascript. I recommend securing the API itself.&lt;/p&gt;
+&lt;p&gt;Sending a text message to your phone can be costly (depending how often you do it). One way around this is with email! Send an email to YouNumber@smsgateway.tld and your phone should receive a text message.&lt;/p&gt;
+&lt;p&gt;Here are some of the SMS Gateway:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Verizon		number@vtext.com
+ATT		number@txt.att.net
+Cricket		number@sms.mycricket.
+T-Mobile	number@@tmomail.net
+
+For more just Google :)
+&lt;/code&gt;&lt;/pre&gt;
+
+        &lt;hr/&gt; &lt;p&gt;&lt;a href=&#39;mailto:arpitbatra123@gmail.com?subject=Reply: Node Gmail API&#39;&gt;Reply via email&lt;/a&gt; &lt;/p&gt;
+      </content>
+    </entry>
+    
+    <entry>
+      <title>Jekyll Short Url</title>
+      <link href="https://www.weckmann.me/posts/jekyll-short-url/"/>
+      <updated>2017-11-01T00:00:00Z</updated>
+      <id>https://www.weckmann.me/posts/jekyll-short-url/</id>
+      <content type="html">&lt;p&gt;Jekyll Short Url uses Goo.gl as a backend and a small Script on your 404 page.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;PLEASE NOTE THAT GOOGLE HAS SHUT DOWN GOO.GL&lt;/strong&gt;&lt;/p&gt;
+&lt;h2&gt;How To&lt;/h2&gt;
+&lt;p&gt;Place this in your 404 page.&lt;/p&gt;
+&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;script&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token script&quot;&gt;&lt;span class=&quot;token language-javascript&quot;&gt;&lt;br /&gt;&lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;window&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;location&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;href&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;indexOf&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;sh&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; shortCode &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; document&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;location&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;href&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;substring&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt; document&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;location&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;href&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;lastIndexOf&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;/&#39;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br /&gt;window&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;location&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;href &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;https://goo.gl&quot;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; shortCode&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br /&gt;    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;br /&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;script&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To use Jekyll Short Url simply navigate toyourblog.com/sh/shorturl.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt; https://clarkhacks.com/sh/48KCGo&lt;/p&gt;
+
+        &lt;hr/&gt; &lt;p&gt;&lt;a href=&#39;mailto:arpitbatra123@gmail.com?subject=Reply: Jekyll Short Url&#39;&gt;Reply via email&lt;/a&gt; &lt;/p&gt;
+      </content>
+    </entry>
+    
+    <entry>
+      <title>WebLense</title>
+      <link href="https://www.weckmann.me/posts/weblense/"/>
+      <updated>2017-12-11T00:00:00Z</updated>
+      <id>https://www.weckmann.me/posts/weblense/</id>
+      <content type="html">&lt;p&gt;There is a cascade of URL-To-Image APIs out there. Most of them are pricey, overly-complicated, non-opensource and you don’t have control of the image files. WebLense takes care of this. WebLense is a self-hosted Url-To-Image API.&lt;/p&gt;
+&lt;h2&gt;How To Use WebLense&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Updated on January 30th, 2018&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Using WebLense is incredibly simple.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://glitch.com/edit/#!/import/github/clarkhacks/WebLense&quot;&gt;&lt;img src=&quot;https://cdn.glitch.com/2703baf2-b643-4da7-ab91-7ee2a2d00b5b%2Fremix-button.svg&quot; alt=&quot;&amp;quot;Remix&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;or&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://heroku.com/deploy?template=https://github.com/clarkhacks/WebLense&quot;&gt;&lt;img src=&quot;https://www.herokucdn.com/deploy/button.svg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;or&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/clarkhacks/WebLense.git
+cd WebLense
+npm install &amp;amp;&amp;amp; npm start
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;API&lt;/h2&gt;
+&lt;p&gt;Use &lt;code&gt;Lense&lt;/code&gt; endpoint for API calls.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;code&gt;GET&lt;/code&gt;&lt;/th&gt;
+&lt;th&gt;Required&lt;/th&gt;
+&lt;th&gt;Function&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;url&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;URL To Capture&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;width&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;End Width&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;height&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;End Height&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;delay&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;Delay Screenshot&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;json&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;Return Json&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;Examples&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Web&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;https://projectid.herokuapp.com/lense?url=https://clarkhacks.com/blog&amp;amp;width=1920&amp;amp;height=720
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;jQuery&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$.get(&#39;https://projectid.glitch.me/lense&#39;,
+{ url: &#39;https://clarkhacks.com&#39; },
+function(data) {
+    ...
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;Out of Space?&lt;/h2&gt;
+&lt;p&gt;Glitch Projects are allowed 128mb of space. The WebLense app takes up ~40mb with captured images taking up the rest.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Options&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Clear &lt;code&gt;sites&lt;/code&gt; Folder&lt;/li&gt;
+&lt;li&gt;Host WebLense somewhere else.&lt;/li&gt;
+&lt;/ul&gt;
+
+        &lt;hr/&gt; &lt;p&gt;&lt;a href=&#39;mailto:arpitbatra123@gmail.com?subject=Reply: WebLense&#39;&gt;Reply via email&lt;/a&gt; &lt;/p&gt;
+      </content>
+    </entry>
+    
+    <entry>
+      <title>Steal Your Consenting Friend&#39;s Gmail Password</title>
+      <link href="https://www.weckmann.me/posts/steal-your-consenting-friends-gmail-password/"/>
+      <updated>2018-01-08T00:00:00Z</updated>
+      <id>https://www.weckmann.me/posts/steal-your-consenting-friends-gmail-password/</id>
+      <content type="html">&lt;p&gt;Do you have a consenting friend who you just happen to need their password? Look no more, here is a complete set up.&lt;/p&gt;
+&lt;h3&gt;How did I do it?&lt;/h3&gt;
+&lt;p&gt;If you just want the code hop over to &lt;a href=&quot;https://www.weckmann.me/posts/steal-your-consenting-friends-gmail-password/%22https://glitch.com/edit/#!/google-phishing%22&quot;&gt;Glitch&lt;/a&gt;. Please note this code is for educational purposes only.&lt;/p&gt;
+&lt;p&gt;I started off with building the form. The form is designed to look &lt;em&gt;identical&lt;/em&gt; to a google login form.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.weckmann.me/posts/steal-your-consenting-friends-gmail-password/%22/assets/images/posts/2018-phishing-form.png%22&quot; alt=&quot;&amp;quot;login&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Set the query parameter &lt;code&gt;email&lt;/code&gt; equal to a users email. For example:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;google-phishing.glitch.me/?email=admin1@gmail.com&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Some Javascript handles the post request to the Node server.&lt;/p&gt;
+&lt;p&gt;Navigate to &lt;a href=&quot;https://www.weckmann.me/posts/steal-your-consenting-friends-gmail-password/%22https://google-phishing.glitch.me/get_log%22&quot;&gt;https://google-phishing.glitch.me/get_log&lt;/a&gt; to see the collected passwords.&lt;/p&gt;
+&lt;p&gt;Why do people fall for this? Most of us see the Google logo and feel safe. A domain like accounts-google-sign-in-appspot-com.glitch.me/… at a glace looks official. Naturally, we want to login to access our data.&lt;/p&gt;
+&lt;p&gt;Whatever you do with this, I hold no liability.&lt;/p&gt;
+
+        &lt;hr/&gt; &lt;p&gt;&lt;a href=&#39;mailto:arpitbatra123@gmail.com?subject=Reply: Steal Your Consenting Friend&#39;s Gmail Password&#39;&gt;Reply via email&lt;/a&gt; &lt;/p&gt;
+      </content>
+    </entry>
+    
+    <entry>
+      <title>LowDB Blog</title>
+      <link href="https://www.weckmann.me/posts/lowdb-blog/"/>
+      <updated>2018-02-02T00:00:00Z</updated>
+      <id>https://www.weckmann.me/posts/lowdb-blog/</id>
+      <content type="html">&lt;p&gt;LowDB Blog is a LowDB (ya don’t say?) and jQuery powered blog with a full private and public API. This repository is updated frequently. &lt;a href=&quot;https://glitch.com/edit/#!/remix/lowdb-blog&quot;&gt;&lt;img src=&quot;https://cdn.glitch.com/2bdfb3f8-05ef-4035-a06e-2043962a3a13%2Fremix%402x.png?1513093958726&quot; alt=&quot;Remix&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;or&lt;/p&gt;
+&lt;p&gt;Clone on Github&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ git clone https://github.com/clarkhacks/LowDB-Blog.git
+$ cd LowDB-Blog
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;Setup&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Run &lt;code&gt;npm install&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Set a secret in &lt;code&gt;secret.example.json&lt;/code&gt;. Make it complicated, like a hard password, &lt;em&gt;(ex: 48zu-QdF5a-dS)&lt;/em&gt; with URL friendly characters.&lt;/li&gt;
+&lt;li&gt;Rename &lt;code&gt;secret.example.json&lt;/code&gt; to “secret.json”. (In production use environmental variables)&lt;/li&gt;
+&lt;li&gt;Set Meta data and Posts via the API or &lt;code&gt;db.json&lt;/code&gt; (In production store data in &lt;code&gt;.data/db.json&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Run &lt;code&gt;node server.js&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;API&lt;/h2&gt;
+&lt;p&gt;The API is relatively simple to understand and use. It is based around post requests and your &lt;code&gt;.env&lt;/code&gt; secret you set earlier. Examples are shown in jQuery.&lt;/p&gt;
+&lt;h3&gt;New Post&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;End Point&lt;/em&gt; &lt;code&gt;/posts/new&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Parameters&lt;/em&gt; &lt;code&gt;title&lt;/code&gt;,&lt;code&gt;date&lt;/code&gt;,&lt;code&gt;body&lt;/code&gt;, and &lt;code&gt;token&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Example&lt;/em&gt; &lt;code&gt;$.post(&amp;quot;/posts/new&amp;quot;, { title: &amp;quot;Title&amp;quot;, date: &amp;quot;Month Day, body: &amp;quot;Lorem ipsum...&amp;quot;, token: &amp;quot;TOKENHERE&amp;quot;});&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;All queries are required.&lt;/p&gt;
+&lt;h3&gt;Meta Data&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;End Point&lt;/em&gt; &lt;code&gt;/meta/:ID&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;IDs&lt;/em&gt; &lt;code&gt;user&lt;/code&gt;,&lt;code&gt;bio&lt;/code&gt;,&lt;code&gt;link&lt;/code&gt;,&lt;code&gt;photo&lt;/code&gt;, &lt;code&gt;photo&lt;/code&gt;, and &lt;code&gt;title&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Parameters&lt;/em&gt; &lt;code&gt;value&lt;/code&gt;, &lt;code&gt;text&lt;/code&gt;, and &lt;code&gt;token&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Example&lt;/em&gt; &lt;code&gt;$.post(&amp;quot;/meta/bio&amp;quot;, { value: &amp;quot;Lorem ipsum...&amp;quot;, token: &amp;quot;TOKENHERE&amp;quot;});&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Example 2&lt;/em&gt; &lt;code&gt;$.post(&amp;quot;/meta/link&amp;quot;, { text: &amp;quot;Google&amp;quot;, value: &amp;quot;google.com&amp;quot;, token: &amp;quot;TOKENHERE&amp;quot;});&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;All queries are required expres text. Text is used only for the &lt;code&gt;link&lt;/code&gt; ID.&lt;/p&gt;
+&lt;h3&gt;Public API&lt;/h3&gt;
+&lt;p&gt;The public API is a read only version of the LowDB json file.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;End Point&lt;/em&gt; &lt;code&gt;/api/v1&lt;/code&gt;&lt;/p&gt;
+
+        &lt;hr/&gt; &lt;p&gt;&lt;a href=&#39;mailto:arpitbatra123@gmail.com?subject=Reply: LowDB Blog&#39;&gt;Reply via email&lt;/a&gt; &lt;/p&gt;
+      </content>
+    </entry>
+    
+    <entry>
+      <title>Glitch Projects</title>
+      <link href="https://www.weckmann.me/posts/glitch-projects/"/>
+      <updated>2019-02-14T00:00:00Z</updated>
+      <id>https://www.weckmann.me/posts/glitch-projects/</id>
+      <content type="html">&lt;p&gt;Let’s talk about Glitch! Glitch is a place to develop your NodeJs projects with community support and abundant inspiration.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.weckmann.me/assets/images/glitch.png&quot; alt=&quot;Glitch.com home page&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Glitch has &lt;em&gt;several&lt;/em&gt; easy to use features:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Git
+&lt;ul&gt;
+&lt;li&gt;Read &amp;amp; Write Support&lt;/li&gt;
+&lt;li&gt;Import From Git Url&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Export Files&lt;/li&gt;
+&lt;li&gt;Collaborative Editing&lt;/li&gt;
+&lt;li&gt;Embedding Projects&lt;/li&gt;
+&lt;li&gt;Custom Domains&lt;/li&gt;
+&lt;li&gt;Logs&lt;/li&gt;
+&lt;li&gt;Console Access&lt;/li&gt;
+&lt;li&gt;Rewind (Git Versioning)&lt;/li&gt;
+&lt;li&gt;SQLite Built In&lt;/li&gt;
+&lt;li&gt;Community Help&lt;/li&gt;
+&lt;li&gt;Asset Storage&lt;/li&gt;
+&lt;li&gt;User Profiles&lt;/li&gt;
+&lt;li&gt;Private Codebases&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;All of these features are free!&lt;/p&gt;
+&lt;h3&gt;Community&lt;/h3&gt;
+&lt;p&gt;With a large and growing community glitch has thousands of projects for you to browse and pull inspiration from. They feature categories such as Hello Worlds, Games, Building Blocks, Learn to Code, Tools for Work, Community Picks, and lots more!&lt;/p&gt;
+&lt;p&gt;Start your project on &lt;a href=&quot;https://www.weckmann.me/posts/glitch-projects/%22https://glitch.com%22&quot;&gt;Glitch&lt;/a&gt; today!&lt;/p&gt;
+
+        &lt;hr/&gt; &lt;p&gt;&lt;a href=&#39;mailto:arpitbatra123@gmail.com?subject=Reply: Glitch Projects&#39;&gt;Reply via email&lt;/a&gt; &lt;/p&gt;
+      </content>
+    </entry>
+    
+    <entry>
+      <title>Install NodeJs on Raspberry Pi</title>
+      <link href="https://www.weckmann.me/posts/install-nodejs-on-raspberry-pi/"/>
+      <updated>2020-01-04T00:00:00Z</updated>
+      <id>https://www.weckmann.me/posts/install-nodejs-on-raspberry-pi/</id>
+      <content type="html">&lt;p&gt;Node.js® is a JavaScript runtime built on Chrome’s V8 JavaScript engine. NodeJs is an increasingly popular language for developers across the board. Let’s cover how to install NodeJs on the Raspberry Pi.&lt;/p&gt;
+&lt;p&gt;To start off we need to add the NodeJs repository to your Pi’s list. Run this command:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This will enable the repository. Once it’s enabled you can install NodeJs and NPM with this command.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ sudo apt install nodejs
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This will take awhile to install, once it’s done test it with this command:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ node -v
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To check NPM run this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ npm -v
+&lt;/code&gt;&lt;/pre&gt;
+
+        &lt;hr/&gt; &lt;p&gt;&lt;a href=&#39;mailto:arpitbatra123@gmail.com?subject=Reply: Install NodeJs on Raspberry Pi&#39;&gt;Reply via email&lt;/a&gt; &lt;/p&gt;
+      </content>
+    </entry>
+    
+    <entry>
+      <title>Jekyll Nginx Server</title>
+      <link href="https://www.weckmann.me/posts/jekyll-nginx-server/"/>
+      <updated>2020-03-17T00:00:00Z</updated>
+      <id>https://www.weckmann.me/posts/jekyll-nginx-server/</id>
+      <content type="html">&lt;p&gt;Here’s how to mimic the Jekyll Development Server with Nginx for a production environment.&lt;/p&gt;
+&lt;p&gt;Create a new &lt;code&gt;sites-available&lt;/code&gt; block (make sure to remove the &lt;code&gt;default&lt;/code&gt; file, it’s already listening on port 80).&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ cd /etc/nginx/sites-available/
+$ sudo nano MYSITE
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Copy and paste the following:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;server {
+  listen 80
+  server_name mysite.example.com
+  root /YOUR-JEKYLL-SITE-PATH/_site
+
+# Cache controle
+  expires 30s
+  add_header Cache-Control public
+  add_header ETag &amp;quot;&amp;quot;
+
+# Error Pages
+  error_page 404 /404.html
+  error_page 500 /500.html
+
+# Your static assets that won&#39;t need the cache reloaded.
+  location  ~ ^/assets/ {
+    expires max
+  }
+
+  location ~ /. {
+    return 404
+    access_log off
+    log_not_found off
+  }
+
+# Favicon handler
+  location = /favicon.ico {
+    try_files /favicon.ico =204
+    access_log off
+    log_not_found off
+  }
+
+# 404 handler
+  location / {
+    try_files $uri $uri.html $uri/ =404
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Save this file with &lt;code&gt;ctrl+x&lt;/code&gt; then &lt;code&gt;Y&lt;/code&gt; and enter. Now we have to link our new configuration file to the &lt;code&gt;sites-enabled&lt;/code&gt; directory and restart Nginx.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ sudo ln -s /etc/nginx/sites-available/MYSITE /etc/nginx/sites-enabled/
+$ sudo service nginx restart
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You’re all set!&lt;/p&gt;
+
+        &lt;hr/&gt; &lt;p&gt;&lt;a href=&#39;mailto:arpitbatra123@gmail.com?subject=Reply: Jekyll Nginx Server&#39;&gt;Reply via email&lt;/a&gt; &lt;/p&gt;
+      </content>
+    </entry>
+    
+    <entry>
+      <title>Change Default Pi Username</title>
+      <link href="https://www.weckmann.me/posts/change-default-pi-username/"/>
+      <updated>2020-04-26T00:00:00Z</updated>
+      <id>https://www.weckmann.me/posts/change-default-pi-username/</id>
+      <content type="html">&lt;p&gt;If you’re using Raspbian your default username is &lt;code&gt;pi&lt;/code&gt;. In this article, I will teach you how to change this username, the password, and remap the home directory. To do this you must first log in as the &lt;code&gt;root&lt;/code&gt; user. By default, the &lt;code&gt;root&lt;/code&gt; user has no password enabled. Log in as the &lt;code&gt;pi&lt;/code&gt; user and enter this command.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ sudo passwd root
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You should choose a safe and secure password for this user. After you change the &lt;code&gt;pi&lt;/code&gt; username to your desired username I recommend disabling the root password. Make sure password login for root is enabled by editing the &lt;code&gt;sshd_config&lt;/code&gt; file.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ sudo nano /etc/ssh/sshd_config
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Find &lt;code&gt;PermitRootLogin without-password&lt;/code&gt; it could say something similar. Change this value to &lt;code&gt;PermitRootLogin yes&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;You can now logout of the &lt;code&gt;pi&lt;/code&gt; user by entering this command.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ logout
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If this command fails to work use the &lt;code&gt;exit&lt;/code&gt; command.&lt;/p&gt;
+&lt;p&gt;Login as the &lt;code&gt;root&lt;/code&gt; user now with the password you created.&lt;/p&gt;
+&lt;p&gt;We need to modify the name of the &lt;code&gt;pi&lt;/code&gt; user now. Run this command. Replace &lt;code&gt;newuser&lt;/code&gt; with your desired username.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;usermod -l newuser pi
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We need to modify the home directory now to match the new username. Again replace &lt;code&gt;newuser&lt;/code&gt; with your desired username.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;usermod -m -d /home/newuser newuser
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can now logout of the &lt;code&gt;root&lt;/code&gt; user and log back in as the username you just created. The password for your username is still the default username for &lt;code&gt;pi&lt;/code&gt;, “raspberry”. If you wish to change this enter this command.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;passwd
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now enter “raspberry” as the &lt;code&gt;Current Password&lt;/code&gt; and then your desired password for &lt;code&gt;New Password&lt;/code&gt; and confirm.&lt;/p&gt;
+&lt;p&gt;If you wish to lock the &lt;code&gt;root&lt;/code&gt; user password for security reasons you can enter the following.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo passwd -l root 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You’re all set! Enjoy your new username.&lt;/p&gt;
+
+        &lt;hr/&gt; &lt;p&gt;&lt;a href=&#39;mailto:arpitbatra123@gmail.com?subject=Reply: Change Default Pi Username&#39;&gt;Reply via email&lt;/a&gt; &lt;/p&gt;
+      </content>
+    </entry>
+    
+    <entry>
+      <title>Homer Dashboard</title>
+      <link href="https://www.weckmann.me/posts/homer-dashboard/"/>
+      <updated>2021-11-10T00:00:00Z</updated>
+      <id>https://www.weckmann.me/posts/homer-dashboard/</id>
+      <content type="html">&lt;p&gt;Self-hosting is becoming more and more popular, with that comes hosting for fun not just for function. I cannot begin to count the number of projects I&#39;ve spun up just to play with. This doesn&#39;t mean you have to keep them forever though. It does mean, however, that organization is a must!&lt;/p&gt;
+&lt;p&gt;I&#39;ve used bookmarks, notes, and default dashboards to keep track of my day-to-day services, as well as my random projects. With the dashboard becoming more popular I&#39;ve tried a lot of pre-built ones like DashMachine, Flame, Dashy, and so many more! I finally landed on one that I will be keeping for awhile - Homer.&lt;/p&gt;
+&lt;p&gt;Special thanks to &lt;a href=&quot;https://github.com/walkxcode&quot;&gt;WalkxCode&lt;/a&gt; on GitHub (&lt;a href=&quot;https://www.reddit.com/user/Walker_21390/&quot;&gt;u/Walker_21390&lt;/a&gt; on Reddit&lt;a href=&quot;https://www.reddit.com/r/selfhosted/comments/q9e82c/yes_this_is_homer_yes_i_spent_2_hours_customizing/&quot;&gt;&lt;/a&gt;) for their amazing Homer theme, without this I wouldn&#39;t have chosen Homer as my day-to-day dashbaord.&lt;/p&gt;
+&lt;p&gt;With that out of the way, let&#39;s get started!&lt;/p&gt;
+&lt;p&gt;To begin let&#39;s install homer with Docker.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;docker run -d \
+  -p 8080:8080 \
+  -v &amp;lt;/your/local/assets/&amp;gt;:/www/assets \
+  --restart=always \
+  b4bz/homer:latest
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Don&#39;t forget to configure the port and set your volume.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Homer has a configuration file located at &lt;code&gt;./assets/config.yml&lt;/code&gt; . This is where we&#39;ll be configuring Homer. If you navigate to &lt;code&gt;http://localhost:8080&lt;/code&gt; you&#39;ll see your Homer Dashboard.&lt;/p&gt;
+&lt;p&gt;The dashboard game is all about how functional and how &lt;em&gt;fancy&lt;/em&gt; your dashboard is. &lt;a href=&quot;https://github.com/walkxcode&quot;&gt;WalkxCode&lt;/a&gt; made this incredibly easy for us. They have the easy to follow instruction over on Github. Check out their write-up &lt;a href=&quot;https://github.com/WalkxCode/Homer-Theme&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.weckmann.me/assets/images/preview-1024x581.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Credit: https://github.com/WalkxCode/Homer-Theme&lt;/p&gt;
+
+        &lt;hr/&gt; &lt;p&gt;&lt;a href=&#39;mailto:arpitbatra123@gmail.com?subject=Reply: Homer Dashboard&#39;&gt;Reply via email&lt;/a&gt; &lt;/p&gt;
+      </content>
+    </entry>
+    
+    <entry>
+      <title>[Matrix] - Open Source Encrypted Messaging</title>
+      <link href="https://www.weckmann.me/posts/matrix-opensource-encrypted-messaging/"/>
+      <updated>2021-11-11T00:00:00Z</updated>
+      <id>https://www.weckmann.me/posts/matrix-opensource-encrypted-messaging/</id>
+      <content type="html">&lt;div class=&quot;box&quot;&gt;Imagine a world...&lt;br /&gt;
+...where it is as simple to message or call anyone as it is to send them an email.&lt;br /&gt;
+...where you can communicate without being forced to install the same app.&lt;br /&gt;
+...where you can choose who hosts your communication.&lt;br /&gt;
+...where your conversations are secured by E2E encryption.&lt;br /&gt;
+...where there’s a simple standard HTTP API for sharing real-time data on the web.&lt;/div&gt;
+&lt;p&gt;Matrix.org&lt;/p&gt;
+&lt;p&gt;If these things interest you as much as they interest me, follow along!&lt;/p&gt;
+&lt;h2&gt;1. Navigate to a Matrix client, I recommend &lt;a href=&quot;https://app.element.io/#/register&quot;&gt;Element&lt;/a&gt;.&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.weckmann.me/assets/images/Landing-1024x768.jpg&quot; alt=&quot;Element App landing page&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Element Landing Page&lt;/p&gt;
+&lt;h2&gt;2. Once here, click on &amp;quot;Create Account.&amp;quot;&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.weckmann.me/assets/images/Create_Account-1024x768.jpg&quot; alt=&quot;Create account form on Element App&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Create Account&lt;/p&gt;
+&lt;h2&gt;3. Select which server you&#39;d like to create your account on.&lt;/h2&gt;
+&lt;p&gt;You can see a list of some &lt;a href=&quot;https://www.hello-matrix.net/public_servers.php&quot;&gt;here&lt;/a&gt;. If you&#39;re unsure just use the default, matrix.org.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.weckmann.me/assets/images/Select_Server-1024x768.jpg&quot; alt=&quot;Selecting your server on Element App&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Select Server&lt;/p&gt;
+&lt;h2&gt;4. Fill out all the standard information and verify your email if necessary.&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.weckmann.me/assets/images/Welcome-1024x768.png&quot; alt=&quot;Welcome page on Element&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Welcome to Element&lt;/p&gt;
+&lt;p&gt;Welcome to the Matrix and Element! From here you can message anyone on any matrix server. This is possible through federation.&lt;/p&gt;
+&lt;p&gt;Federation refers to different computing entities adhering to a certain standard of operations in a collective manner to facilitate communication. It also describes operations between two distinct formally disconnected telecommunication networks with distinct internal structures. It may also describe an attempt made by groups to delegate authority of development and prevent fragmentation.&lt;/p&gt;
+&lt;p&gt;Techopedia&lt;/p&gt;
+&lt;h2&gt;Let&#39;s Send A Direct Message Now!&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.weckmann.me/assets/images/DM-1024x768.png&quot; alt=&quot;Send DM on Element&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Sending Direct Messages&lt;/p&gt;
+&lt;p&gt;What does &lt;strong&gt;@clark:chat.wkmn.cloud&lt;/strong&gt; mean?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;@clark&lt;/strong&gt; = The user you&#39;re looking to message.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;chat.wkmn.cloud&lt;/strong&gt; = The Matrix server the user exists on.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.weckmann.me/assets/images/Send_Message-1-1024x768.png&quot; alt=&quot;Send message on Element&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Sending Direct Messages&lt;/p&gt;
+&lt;h2&gt;Profile Customization!&lt;/h2&gt;
+&lt;p&gt;Element makes it incredibly easy to customize your profile. In the upper-right-hand corner select the down arrow next to your name.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.weckmann.me/assets/images/Menu-1024x768.png&quot; alt=&quot;Config menu on Element&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Action Menu&lt;/p&gt;
+&lt;p&gt;From here select &amp;quot;All Settings.&amp;quot;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.weckmann.me/assets/images/Settings-1024x768.png&quot; alt=&quot;Settings menyu on Element&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Settings&lt;/p&gt;
+&lt;p&gt;You can change your display name, password, email, photo, and more! Dig through the settings and mix some things up.&lt;/p&gt;
+&lt;h2&gt;Thank You!&lt;/h2&gt;
+&lt;p&gt;Thank&#39;s for reading my post! If you&#39;ve followed along feel free to message me!&lt;/p&gt;
+
+        &lt;hr/&gt; &lt;p&gt;&lt;a href=&#39;mailto:arpitbatra123@gmail.com?subject=Reply: [Matrix] - Open Source Encrypted Messaging&#39;&gt;Reply via email&lt;/a&gt; &lt;/p&gt;
+      </content>
+    </entry>
+    
+    <entry>
+      <title>Glitch, The Underrated Tool</title>
+      <link href="https://www.weckmann.me/posts/glitch-its-underrated/"/>
+      <updated>2021-11-17T00:00:00Z</updated>
+      <id>https://www.weckmann.me/posts/glitch-its-underrated/</id>
+      <content type="html">&lt;p&gt;&lt;strong&gt;Before we dive in, I&#39;m a firm believer in learning by doing. So if you don&#39;t want to read this post just click &lt;a href=&quot;https://glitch.com/create-project&quot;&gt;here&lt;/a&gt; to get started on Glitch now!&lt;/strong&gt;&lt;br /&gt;
+Glitch defines itself as&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Glitch: The friendly community where everyone builds the web&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;and I couldn&#39;t agree more!&lt;/p&gt;
+&lt;h2&gt;For Free&lt;/h2&gt;
+&lt;p&gt;Unless you plan on using Glitch for a small-scale operation that isn&#39;t just development, you can get away with the free plan! I only upgraded to give back to the developers. These people deserve it! For free you get:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Projects and code are public by default
+&lt;ul&gt;
+&lt;li&gt;Environmental variables are always private&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Full-stack apps that sleep after 5 minutes&lt;/li&gt;
+&lt;li&gt;Unlimited static sites that are always on&lt;/li&gt;
+&lt;li&gt;Github import/export and Prettier support&lt;/li&gt;
+&lt;li&gt;Custom Domains&lt;/li&gt;
+&lt;li&gt;512MB Memory&lt;/li&gt;
+&lt;li&gt;199MB Disk Space&lt;/li&gt;
+&lt;li&gt;Terminal Access&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Starter Templates&lt;/h2&gt;
+&lt;h3&gt;Glitch In Bio&lt;/h3&gt;
+&lt;p&gt;Instantly create a list of your favorite links, and customize them for free.&lt;br /&gt;
+&lt;a href=&quot;https://glitch.com/edit/#!/remix/glitch-in-bio&quot;&gt;Remix&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;Website&lt;/h3&gt;
+&lt;p&gt;Build a website from scratch using the basics: HTML, CSS, and JavaScript. It could be a splash page, VR web experiment, or personal page.&lt;br /&gt;
+&lt;a href=&quot;https://glitch.com/edit/#!/remix/glitch-hello-website&quot;&gt;Remix&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;Node.js&lt;/h3&gt;
+&lt;p&gt;Do even more with JavaScript on the server! Create a full-stack Node.js project. It could be anything — an API, a web app, or a data tool.&lt;br /&gt;
+&lt;a href=&quot;https://glitch.com/edit/#!/remix/glitch-hello-node&quot;&gt;Remix&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;React&lt;/h3&gt;
+&lt;p&gt;Build an interactive website with complex states using one of the web’s most widely used frameworks. Deploys as a fast, always-on static site.&lt;br /&gt;
+&lt;a href=&quot;https://glitch.com/edit/#!/remix/glitch-hello-react&quot;&gt;Remix&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;Eleventy&lt;/h3&gt;
+&lt;p&gt;A simple static site generator that’s perfect for building your new blog. Eleventy removes the repetition from creating a multi-page site.&lt;br /&gt;
+&lt;a href=&quot;https://glitch.com/edit/#!/remix/glitch-hello-eleventy&quot;&gt;Remix&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;SQLite&lt;/h3&gt;
+&lt;p&gt;Use a persistent SQLite database with your Node.js app.&lt;br /&gt;
+&lt;a href=&quot;https://glitch.com/edit/#!/remix/glitch-hello-sqlite&quot;&gt;Remix&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Git Support&lt;/h2&gt;
+&lt;p&gt;Glitch officially supports importing and exporting to Github. If Github isn&#39;t your forte, you can use the git URL to import from anywhere!&lt;/p&gt;
+&lt;p&gt;Each project is given a git URL for remote editing too. This way you aren&#39;t confined to the web IDE.&lt;/p&gt;
+&lt;h2&gt;In Conslusion&lt;/h2&gt;
+&lt;p&gt;I&#39;ve been using glitch since the early alpha days. Things have changed a lot over time for the better. It&#39;s the nature of development. I&#39;m confident in what Glitch is doing and am thankful for how easy they have made my life. If you&#39;re just trying to learn, check out their Discover section or search for projects to remix and edit yourself!&lt;/p&gt;
+
+        &lt;hr/&gt; &lt;p&gt;&lt;a href=&#39;mailto:arpitbatra123@gmail.com?subject=Reply: Glitch, The Underrated Tool&#39;&gt;Reply via email&lt;/a&gt; &lt;/p&gt;
+      </content>
+    </entry>
+</feed>

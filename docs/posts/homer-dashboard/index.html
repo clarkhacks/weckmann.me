@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="Description" content="You're reading it!" />
+  <title>Homer Dashboard</title>
+  <link rel="shortcut icon" type="image/jpg" href="/favicon.png"/>
+  <link rel="alternate" href="/feed.xml" type="application/atom+xml" title="Clark Weckmann" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="stylesheet" href="/styles/common.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="/script.js" defer></script>
+</head>
+
+<body>
+  <!-- START NAV -->
+    <nav class="navbar">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+          <img src="https://cdn.weckmann.me/wkmn.png" alt="Logo" />
+        </a>
+        <span class="navbar-burger burger" data-target="navbarMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </div>
+      <div id="navbarMenu" class="navbar-menu">
+        <div class="navbar-end">
+          <a href="/" class="navbar-item is-active is-size-5 has-text-weight-semibold">
+            Home
+          </a>
+          <a href="https://buy.stripe.com/bIY4ie5Uq9oegiA8wz" class="navbar-item is-size-5 has-text-weight-semibold">
+            Donate
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- END NAV -->
+
+  <!-- Image -->
+  <section class="hero">
+    <div class="container">
+      <section class="section content">
+        <div class="content is-medium">
+          <h1 class="title">Homer Dashboard</h1>
+        </div>
+      </section>
+    </div>
+  </section>
+  <section class="hero columns" style="
+    width: 100%;
+">
+    <div class="hero-body column is-half is-offset-one-quarter">
+      <div class="container content">
+        <section class="section">
+          <p><p>Self-hosting is becoming more and more popular, with that comes hosting for fun not just for function. I cannot begin to count the number of projects I've spun up just to play with. This doesn't mean you have to keep them forever though. It does mean, however, that organization is a must!</p>
+<p>I've used bookmarks, notes, and default dashboards to keep track of my day-to-day services, as well as my random projects. With the dashboard becoming more popular I've tried a lot of pre-built ones like DashMachine, Flame, Dashy, and so many more! I finally landed on one that I will be keeping for awhile - Homer.</p>
+<p>Special thanks to <a href="https://github.com/walkxcode">WalkxCode</a> on GitHub (<a href="https://www.reddit.com/user/Walker_21390/">u/Walker_21390</a> on Reddit<a href="https://www.reddit.com/r/selfhosted/comments/q9e82c/yes_this_is_homer_yes_i_spent_2_hours_customizing/"></a>) for their amazing Homer theme, without this I wouldn't have chosen Homer as my day-to-day dashbaord.</p>
+<p>With that out of the way, let's get started!</p>
+<p>To begin let's install homer with Docker.</p>
+<pre><code>docker run -d \
+  -p 8080:8080 \
+  -v &lt;/your/local/assets/&gt;:/www/assets \
+  --restart=always \
+  b4bz/homer:latest
+</code></pre>
+<p><strong>Don't forget to configure the port and set your volume.</strong></p>
+<p>Homer has a configuration file located at <code>./assets/config.yml</code> . This is where we'll be configuring Homer. If you navigate to <code>http://localhost:8080</code> you'll see your Homer Dashboard.</p>
+<p>The dashboard game is all about how functional and how <em>fancy</em> your dashboard is. <a href="https://github.com/walkxcode">WalkxCode</a> made this incredibly easy for us. They have the easy to follow instruction over on Github. Check out their write-up <a href="https://github.com/WalkxCode/Homer-Theme">here</a>.</p>
+<p><img src="/assets/images/preview-1024x581.png" alt=""></p>
+<p>Credit: https://github.com/WalkxCode/Homer-Theme</p>
+</p>
+        </section>
+      </div>
+    </div>
+  </section>
+    <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        <strong>Weckmann.me</strong> by WKMN Development
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Get all "navbar-burger" elements
+      const $navbarBurgers = Array.prototype.slice.call(
+        document.querySelectorAll(".navbar-burger"),
+        0
+      );
+
+      // Check if there are any navbar burgers
+      if ($navbarBurgers.length > 0) {
+        // Add a click event on each of them
+        $navbarBurgers.forEach(el => {
+          el.addEventListener("click", () => {
+            // Get the target from the "data-target" attribute
+            const target = el.dataset.target;
+            const $target = document.getElementById(target);
+
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            el.classList.toggle("is-active");
+            $target.classList.toggle("is-active");
+          });
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>
