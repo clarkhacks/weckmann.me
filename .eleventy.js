@@ -6,6 +6,8 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPassthroughCopy('favicon.png');
   eleventyConfig.addPassthroughCopy('assets');
+  eleventyConfig.addPassthroughCopy('CNAME');
+
   const options = {
     html: true,
     breaks: true,
