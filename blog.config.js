@@ -2,7 +2,7 @@ const BLOG = {
   title: 'Weckmann',
   author: 'Clark Weckmann',
   email: 'clark@weckmann.me',
-  link: 'https://www.weckmann.com',
+  link: 'https://blog.clark.today',
   description: 'Read some of my acticles!',
   icon: '/me_macbook.png',
   lang: 'en-US', // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES']
