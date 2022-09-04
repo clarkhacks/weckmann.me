@@ -78,9 +78,14 @@ body::-webkit-scrollbar-thumb {
 }
 
 .sticky-nav-full > div > a > div > .siteIcon {
-  max-width: 2rem;
+  max-width: 2rem!important;
   transition: all 0.5s cubic-bezier(0.4, 0, 0, 1);
   margin: .75rem;
+  
+}
+.sticky-nav-full > div > a > div > .nav-name {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0, 1);
+  display: none;
   
 }
 
@@ -125,8 +130,8 @@ nav {
   user-select: none;
 }
 .siteIcon {
-  max-width:5rem;
-  width: 100%;
+  max-width:5rem!important;
+  width: 100%!important;
 }
 
 @media (min-width: 768px) {

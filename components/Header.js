@@ -7,7 +7,7 @@ import { useLocale } from '@/lib/locale'
 const NavBar = () => {
   const locale = useLocale()
   const links = [
-    { id: 0, name: 'Clark.Today', to: 'https://www.clark.today', show: false },
+    { id: 0, name: 'Clark.Today', to: 'https://www.clark.today', show: true },
     { id: 1, name: locale.NAV.INDEX, to: BLOG.path || '/', show: true },
     { id: 2, name: locale.NAV.ABOUT, to: '/about', show: BLOG.showAbout },
     { id: 3, name: locale.NAV.RSS, to: '/feed', show: false },
@@ -71,8 +71,9 @@ const Header = ({ navBarTitle, fullWidth }) => {
         <div className="flex items-center">
           <Link href="/">
             <a aria-label={BLOG.title}>
-              <div className="text-white text-4xl">
-                <Image src={BLOG.icon} className="siteIcon" alt="Memoji of Clark."/>
+              <div className="text-white text-2xl">
+                <Image width={48} height={48} src={BLOG.icon} className="siteIcon" alt="Memoji of Clark."/>
+                <span className="nav-name">Clark Weckmann</span>
               </div>
             </a>
           </Link>
