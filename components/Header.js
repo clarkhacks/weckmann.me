@@ -72,7 +72,7 @@ const Header = ({ navBarTitle, fullWidth }) => {
           <Link href="/">
             <a aria-label={BLOG.title}>
               <div className="text-white text-4xl">
-                <img src={BLOG.icon} className="siteIcon" alt="Memoji of Clark."/>
+                <Image src={BLOG.icon} className="siteIcon" alt="Memoji of Clark."/>
               </div>
             </a>
           </Link>
