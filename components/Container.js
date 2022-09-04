@@ -38,9 +38,7 @@ const Container = ({ children, layout, fullWidth, ...customMeta }) => {
         />
         <meta
           property="og:image"
-          content={`${BLOG.ogImageGenerateURL}/?url=${encodeURIComponent(
-            meta.slug
-          )}`}
+          content={`${BLOG.ogImageGenerateURL}/?url=${url}/${meta.slug}`}
         />
         <meta property="og:type" content={meta.type} />
         <meta name="twitter:card" content="summary_large_image" />
@@ -48,9 +46,7 @@ const Container = ({ children, layout, fullWidth, ...customMeta }) => {
         <meta name="twitter:title" content={meta.title} />
         <meta
           name="twitter:image"
-          content={`${BLOG.ogImageGenerateURL}/?url=${encodeURIComponent(
-            meta.slug
-          )}`}
+          content={`${BLOG.ogImageGenerateURL}/?url=${url}/${meta.slug}`}
         />
         {meta.type === 'article' && (
           <>
