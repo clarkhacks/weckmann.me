@@ -29,7 +29,7 @@ const Layout = ({
       // date={new Date(frontMatter.publishedAt).toISOString()}
       type="article"
       slug={router.asPath}
-      keywords={frontmatter.tags.map(tag => tag.name).join(', ')}
+      keywords={frontMatter.tags.map(tag => tag.name).join(', ')}
       fullWidth={fullWidth}
     >
       <article>
