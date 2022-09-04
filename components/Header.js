@@ -1,15 +1,17 @@
 import { useEffect, useRef } from 'react'
 import Link from 'next/link'
 import BLOG from '@/blog.config'
+import Image from 'next/image'
 import { useLocale } from '@/lib/locale'
 
 const NavBar = () => {
   const locale = useLocale()
   const links = [
-    { id: 0, name: locale.NAV.INDEX, to: BLOG.path || '/', show: true },
-    { id: 1, name: locale.NAV.ABOUT, to: '/about', show: BLOG.showAbout },
-    { id: 2, name: locale.NAV.RSS, to: '/feed', show: false },
-    { id: 3, name: locale.NAV.SEARCH, to: '/search', show: true }
+    { id: 0, name: 'Clark.Today', to: 'https://www.clark.today', show: false },
+    { id: 1, name: locale.NAV.INDEX, to: BLOG.path || '/', show: true },
+    { id: 2, name: locale.NAV.ABOUT, to: '/about', show: BLOG.showAbout },
+    { id: 3, name: locale.NAV.RSS, to: '/feed', show: false },
+    { id: 4, name: locale.NAV.SEARCH, to: '/search', show: true }
   ]
   return (
     <div className="flex-shrink-0">
