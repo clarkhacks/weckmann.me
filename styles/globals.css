@@ -123,6 +123,10 @@ nav {
   line-height: 1.5em;
 }
 
+img:hover {
+  scale: 1.15;
+}
+
 .article-tags::-webkit-scrollbar {
   width: 0 !important;
 }
