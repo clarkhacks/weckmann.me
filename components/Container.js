@@ -26,7 +26,7 @@ const Container = ({ children, layout, fullWidth, ...customMeta }) => {
           />
         )}
         {BLOG.seo.keywords && (
-          <meta name="keywords" content={BLOG.seo.keywords.join(', ') + ',' + meta.keywords.join(', ')} />
+          <meta name="keywords" content={BLOG.seo.keywords.join(', ') + ',' + meta.keywords} />
         )}
         <meta name="description" content={meta.description} />
         <meta property="og:locale" content={BLOG.lang} />
