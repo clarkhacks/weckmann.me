@@ -135,8 +135,8 @@ nav {
 }
 
 /* [3] Finally, transforming the image when container gets hovered */
-.notion-asset-wrapper-image:hover > div > img {
-  transform: scale(1.5);
+.notion-asset-wrapper-image > div > img:hover {
+  transform: scale(1.2);
 }
 
 .article-tags::-webkit-scrollbar {
