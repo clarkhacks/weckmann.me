@@ -69,9 +69,9 @@ const Header = ({ navBarTitle, fullWidth }) => {
         ref={navRef}
       >
         <div className="flex items-center">
-          <Link href="/" className="w-full">
+          <Link href="/">
             <a aria-label={BLOG.title} className="w-full">
-              <div className="text-white w-full">
+              <div className="text-white w-full sticky-hide">
                 <Image width={48} height={48} src={BLOG.icon} className="siteIcon" alt="Memoji of Clark."/>
                 <span className="nav-name">Clark Weckmann</span>
               </div>

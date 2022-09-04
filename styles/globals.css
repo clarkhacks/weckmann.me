@@ -89,6 +89,10 @@ body::-webkit-scrollbar-thumb {
   display: none!important;
   
 }
+.sticky-nav-full > div > a {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0, 1);
+  width: 3rem;
+}
 
 .nav-name {
   display: inline-block;
