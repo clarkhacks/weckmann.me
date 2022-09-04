@@ -28,6 +28,7 @@ const Layout = ({
       description={frontMatter.summary}
       // date={new Date(frontMatter.publishedAt).toISOString()}
       type="article"
+      slug={router.asPath}
       fullWidth={fullWidth}
     >
       <article>
