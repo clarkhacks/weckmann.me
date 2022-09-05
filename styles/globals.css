@@ -167,15 +167,19 @@ table {
 }
 
 tr {
+  /* Generic Styles */
   border: 1px solid #ccc;
+  background-color: #303030;
 }
 
 tr:hover {
-  background-color: #323232;
+  /* On hover change the background color */
+  background-color: #464646;
 }
 
 tr:nth-child(even) {
-  background-color: #303030;
+  /* Every even row gets a different color */
+  background-color: #3d3d3d;
 }
 @media (min-width: 768px) {
   .sticky-nav-full {
