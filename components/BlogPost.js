@@ -19,6 +19,11 @@ const BlogPost = ({ post }) => {
             <p className="hidden md:block leading-8 text-gray-700 dark:text-gray-300">
               {post.summary}
             </p>
+            <div className="hidden md:block leading-8 text-gray-700 dark:text-gray-300 text-right">
+              <a href={post.link}>
+                Read More
+              </a>
+            </div>
           </main>
           <hr />
         </article>
