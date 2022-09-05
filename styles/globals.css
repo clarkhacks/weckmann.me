@@ -174,7 +174,7 @@ tr {
 
 tr:hover {
   /* On hover change the background color */
-  background-color: #464646;
+  background-color: #373737;
 }
 
 tr:nth-child(even) {
