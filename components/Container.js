@@ -26,7 +26,7 @@ const Container = ({ children, layout, fullWidth, ...customMeta }) => {
           />
         )}
         {BLOG.seo.keywords && (
-          <meta name="keywords" content={BLOG.seo.keywords.join(', ')} />
+          <meta name="keywords" content={BLOG.seo.keywords.join(', ') + ', ' + meta.keywords} />
         )}
         <meta name="description" content={meta.description} />
         <meta property="og:locale" content={BLOG.lang} />
@@ -34,13 +34,11 @@ const Container = ({ children, layout, fullWidth, ...customMeta }) => {
         <meta property="og:description" content={meta.description} />
         <meta
           property="og:url"
-          content={meta.slug ? `${url}/${meta.slug}` : url}
+          content={meta.slug ? `${url}${meta.slug}` : url}
         />
         <meta
           property="og:image"
-          content={`${BLOG.ogImageGenerateURL}/${encodeURIComponent(
-            meta.title
-          )}.png?theme=dark&md=1&fontSize=125px&images=https%3A%2F%2Fnobelium.vercel.app%2Flogo-for-dark-bg.svg`}
+          content={`${BLOG.ogImageGenerateURL}/?url=${url}${meta.slug}`}
         />
         <meta property="og:type" content={meta.type} />
         <meta name="twitter:card" content="summary_large_image" />
@@ -48,9 +46,7 @@ const Container = ({ children, layout, fullWidth, ...customMeta }) => {
         <meta name="twitter:title" content={meta.title} />
         <meta
           name="twitter:image"
-          content={`${BLOG.ogImageGenerateURL}/${encodeURIComponent(
-            meta.title
-          )}.png?theme=dark&md=1&fontSize=125px&images=https%3A%2F%2Fnobelium.vercel.app%2Flogo-for-dark-bg.svg`}
+          content={`${BLOG.ogImageGenerateURL}/?url=${url}${meta.slug}`}
         />
         {meta.type === 'article' && (
           <>

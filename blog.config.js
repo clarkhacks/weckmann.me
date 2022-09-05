@@ -2,7 +2,7 @@ const BLOG = {
   title: 'Weckmann',
   author: 'Clark Weckmann',
   email: 'clark@weckmann.me',
-  link: 'https://www.weckmann.com',
+  link: 'https://blog.clark.today',
   description: 'Read some of my acticles!',
   icon: '/me_macbook.png',
   lang: 'en-US', // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES']
@@ -17,7 +17,7 @@ const BLOG = {
   showAbout: true,
   showArchive: true,
   autoCollapsedNavBar: false, // The automatically collapsed navigation bar
-  ogImageGenerateURL: 'https://og-image-craigary.vercel.app', // The link to generate OG image, don't end with a slash
+  ogImageGenerateURL: 'https://weblense.co/s', // The link to generate OG image, don't end with a slash
   socialLink: 'https://twitter.com/theweckmann',
   seo: {
     keywords: ['Blog', 'Website', 'Notion'],
