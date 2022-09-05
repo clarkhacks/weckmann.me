@@ -166,15 +166,15 @@ table {
   border: 1px solid #ccc;
 }
 
-td {
+tr {
   border: 1px solid #ccc;
 }
 
-td:hover {
+tr:hover {
   background-color: #323232;
 }
 
-td:nth-child(even) {
+tr:nth-child(even) {
   background-color: #303030;
 }
 @media (min-width: 768px) {
