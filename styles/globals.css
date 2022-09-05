@@ -165,6 +165,18 @@ table {
   width: 100%;
   border: 1px solid #ccc;
 }
+
+td {
+  border: 1px solid #ccc;
+}
+
+td:hover {
+  background-color: #323232;
+}
+
+td:nth-child(even) {
+  background-color: #303030;
+}
 @media (min-width: 768px) {
   .sticky-nav-full {
     @apply max-w-full border-b border-opacity-50 border-gray-200 dark:border-gray-600 dark:border-opacity-50;
