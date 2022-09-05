@@ -169,17 +169,17 @@ table {
 tr {
   /* Generic Styles */
   border: 1px solid #ccc;
-  background-color: #303030;
+  background-color: #212121;
 }
 
 tr:hover {
   /* On hover change the background color */
-  background-color: #373737;
+  background-color: #2a2a2a;
 }
 
 tr:nth-child(even) {
   /* Every even row gets a different color */
-  background-color: #3d3d3d;
+  background-color: #2c2c2c;
 }
 @media (min-width: 768px) {
   .sticky-nav-full {
