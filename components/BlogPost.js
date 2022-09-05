@@ -19,7 +19,7 @@ const BlogPost = ({ post }) => {
             <p className="hidden md:block leading-8 text-gray-700 dark:text-gray-300">
               {post.summary}
             </p>
-            <div className="hidden md:block leading-8 text-gray-700 dark:text-gray-300 text-right font-bold">
+            <div className="leading-8 text-gray-700 dark:text-gray-300 text-right font-bold">
             <Link href={`${BLOG.path}/${post.slug}`}>
               <a>Read More</a>
             </Link>
