@@ -20,6 +20,7 @@ const BlogPost = ({ post }) => {
               {post.summary}
             </p>
           </main>
+          <hr />
         </article>
       </a>
     </Link>
