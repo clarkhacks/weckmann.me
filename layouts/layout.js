@@ -12,9 +12,6 @@ import Link from 'next/link'
 const mapPageUrl = id => {
   return 'https://www.notion.so/' + id.replace(/-/g, '')
 }
-const readInNotion = id => {
-  return 'https://weckmann.notion.site/' + id
-}
 
 const Layout = ({
   children,
@@ -69,7 +66,7 @@ const Layout = ({
               </div>
             )}
             <div>
-              <Link href={readInNotion}>
+              <Link href={`https://weckmann.notion.site/${id}`}>
               Read In Notion
               </Link>
             </div>
