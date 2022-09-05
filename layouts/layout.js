@@ -66,7 +66,7 @@ const Layout = ({
               </div>
             )}
             <div>
-              <Link href={`${mapPageUrl}`}>
+              <Link href={mapPageUrl}>
               Read In Notion
               </Link>
             </div>
