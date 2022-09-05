@@ -66,7 +66,7 @@ const Layout = ({
               </div>
             )}
             <div>
-              <Link href={`https://weckmann.notion.site/${id}`}>
+              <Link href={`${mapPageUrl}`}>
               Read In Notion
               </Link>
             </div>
