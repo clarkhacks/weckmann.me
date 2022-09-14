@@ -11,19 +11,6 @@ import Comments from '@/components/Comments'
 const mapPageUrl = id => {
   return 'https://www.notion.so/' + id.replace(/-/g, '')
 }
-// prefix all hrefs with https://out.clark.today/?link=
-const prefixAllLinks = (text, blockMap) => {
-  const links = text.match(/href="([^"]*)"/g)
-  if (links) {
-    links.forEach(link => {
-      const href = link.match(/href="([^"]*)"/)[1]
-      if (href.indexOf('/') !== 0) {
-        text = text.replace(link, `href="https://out.clark.today/?link=${href}"`)
-      }
-    })
-  }
-  return text
-}
 const Layout = ({
   children,
   blockMap,
