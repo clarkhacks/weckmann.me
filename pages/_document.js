@@ -103,7 +103,7 @@ class MyDocument extends Document {
         <body className="bg-day dark:bg-night">
           <Main />
           <NextScript />
-          <script src="/linkTrack.js"></script>
+          <script src="/linkTrack.js" strategy="afterInteractive"/>
         </body>
       </Html>
     )
