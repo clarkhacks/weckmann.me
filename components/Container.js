@@ -36,17 +36,14 @@ const Container = ({ children, layout, fullWidth, ...customMeta }) => {
           property="og:url"
           content={meta.slug ? `${url}${meta.slug}` : url}
         />
-        <meta
-          property="og:image"
-          content={`${BLOG.ogImageGenerateURL}/${meta.title}`}
-        />
+        <meta property="og:image" content={!meta.OG_override ? BLOG.ogImageGenerateURL + '/' + meta.title : meta.OG_override } />
         <meta property="og:type" content={meta.type} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:title" content={meta.title} />
         <meta
           name="twitter:image"
-          content={`${BLOG.ogImageGenerateURL}/${meta.title}`}
+          content={!meta.OG_override ? BLOG.ogImageGenerateURL + '/' + meta.title : meta.OG_override }
         />
         {meta.type === 'article' && (
           <>

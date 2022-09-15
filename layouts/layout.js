@@ -29,6 +29,7 @@ const Layout = ({
       type="article"
       slug={router.asPath}
       keywords={frontMatter.tags}
+      OG={frontMatter.OG}
       fullWidth={fullWidth}
     >
       <article>
